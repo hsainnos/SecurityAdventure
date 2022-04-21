@@ -32,6 +32,25 @@ export class TabContainer implements HtmlObject{
         this.tabs.push(tab)
     };
 
+    makeNextTabActive = () => {
+
+        let activeIndex = this.tabs.findIndex((tab) =>{
+            return tab.active;
+        })
+
+        this.tabs[activeIndex].makeTabInactive()
+        this.tabs[(activeIndex + 1) % this.tabs.length].makeTabActive()
+    };
+
+    makeNextDomTabActive = () => {
+        let activeIndex = this.tabs.findIndex((tab) =>{
+            return tab.active;
+        })
+
+        this.tabs[activeIndex].makeTabDomElementInactive()
+        this.tabs[(activeIndex + 1) % this.tabs.length].makeTabDomElementActive()
+    };
+
     makeTabsValid = (oneTabMustBeActive : boolean = false) => {
         let tabActiveCounter = 0
 
@@ -50,4 +69,9 @@ export class TabContainer implements HtmlObject{
             this.tabs[0].makeTabActive()
         }
     };
+
+
+    getActiveTab = () => this.tabs.find((tab) => {
+        return tab.active;
+    });
 }

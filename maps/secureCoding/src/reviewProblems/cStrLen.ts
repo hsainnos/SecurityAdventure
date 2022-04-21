@@ -5,6 +5,7 @@ $(function() {
 
 
     let codeContainer = $("#code-container")
+    codeContainer.trigger("focus");
     let review1 : ReviewObject = new ReviewObject()
     let tab1 = review1.createTabWithCode(false,    "#include <stdio.h>"+"\n" +
         "#include <stdio.h>" +
@@ -17,11 +18,14 @@ $(function() {
         "}\n", "clike")
 
     review1.addButton(tab1,"Good!", () => {alert("FALSCH")})
-    review1.addButton(tab1,"Bad!", () => {codeContainer.append(review2.getHtml())})
+    review1.addButton(tab1,"Bad!", () => {codeContainer.append(review2.getHtml())
+        review1.unbindButtons();
+        review2.bindButtonsToKeys()})
 
 
 
     codeContainer.append(review1.getHtml())
+    review1.bindButtonsToKeys();
 
 
 //Teil 2

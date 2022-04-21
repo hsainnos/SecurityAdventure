@@ -4,6 +4,7 @@ $(function() {
 
 
     let codeContainer = $("#code-container")
+    codeContainer.focus()
     let review1 : ReviewObject = new ReviewObject()
     let tab1 = review1.createTabWithCode(true,    "import java.io.IOException;\n" +
         "import java.io.PrintWriter;\n" +
@@ -29,11 +30,14 @@ $(function() {
         "}\n", "java")
 
     review1.addButton(tab1,"Good!", () => {alert("Die Antwort ist leider falsch!")})
-    review1.addButton(tab1,"Bad!", () => {codeContainer.append(review2.getHtml())})
+    review1.addButton(tab1,"Bad!", () => {codeContainer.append(review2.getHtml())
+        review1.unbindButtons();
+        review2.bindButtonsToKeys()})
 
 
 
     codeContainer.append(review1.getHtml())
+    review1.bindButtonsToKeys();
 
 
 //Teil 2

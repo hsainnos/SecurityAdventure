@@ -15,9 +15,13 @@ export class Button implements HtmlObject{
 
 
     getHtml = (): JQuery => {
-        let buttonHtml = $("<button type='button' class='btn btn-primary'>" + this.name + "</button>")
+        let buttonHtml = $("<button type='button' id='"+this.id+"' class='btn btn-primary'>" + this.name + "</button>")
         buttonHtml.on("click", this.onClickFunction)
         return buttonHtml
+    };
+
+    triggerButton = () => {
+        $("#" + this.id).trigger("click");
     };
 
 }

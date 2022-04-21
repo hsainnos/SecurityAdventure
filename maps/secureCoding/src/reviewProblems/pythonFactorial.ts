@@ -4,6 +4,7 @@ $(function() {
 
 
     let codeContainer = $("#code-container")
+    codeContainer.trigger("focus");
     let review1 : ReviewObject = new ReviewObject()
     let tab1 = review1.createTabWithCode(true,    "import math\n" +
         "\n" +
@@ -21,5 +22,6 @@ $(function() {
 
 
     codeContainer.append(review1.getHtml())
+    review1.bindButtonsToKeys();
 
 })

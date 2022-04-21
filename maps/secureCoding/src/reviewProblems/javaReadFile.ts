@@ -4,6 +4,7 @@ $(function() {
 
 
     let codeContainer = $("#code-container")
+    codeContainer.focus()
     let review1 : ReviewObject = new ReviewObject()
     let tab1 = review1.createTabWithCode(true,    "import java.io.File;\n" +
         "import java.io.FileNotFoundException;\n" +
@@ -29,6 +30,7 @@ $(function() {
 
 
     codeContainer.append(review1.getHtml())
+    review1.bindButtonsToKeys();
 
 
 

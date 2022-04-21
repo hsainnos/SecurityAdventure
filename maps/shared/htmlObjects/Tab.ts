@@ -23,6 +23,17 @@ export class Tab {
         this.active = false
     };
 
+    makeTabDomElementInactive = () => {
+        this.makeTabInactive()
+        $("#tab" +this.id).removeClass("active")
+        $("#tabHeader" +this.id).removeClass("active")
+    };
+
+    makeTabDomElementActive = () => {
+        this.makeTabActive()
+        $("#tab" +this.id).addClass("active")
+        $("#tabHeader" +this.id).addClass("active")
+    };
 
     addTabContent = (identifier: string, element: HtmlObject) => {
         this.tabContents.push({identifier: identifier, element: element})
@@ -68,6 +79,7 @@ export class Tab {
         } else {
             htmlHeader = $("<li>" + "<a href='#tab" + this.id + "' data-toggle='tab'>" + this.tabName + "</a></li>")
         }
+        htmlHeader.attr('id', "tabHeader" + this.id);
         return htmlHeader
     };
 

@@ -3,6 +3,7 @@ import {ReviewObject} from "../ReviewObject.js";
 $(function() {
 
     let codeContainer = $("#code-container")
+    codeContainer.trigger("focus");
     let review1 : ReviewObject = new ReviewObject()
     let tab1 = review1.createTabWithCode(true,    "from decimal import Decimal\n" +
         "\n" +
@@ -19,10 +20,13 @@ $(function() {
         "        return \"wrong input\"\n")
 
     review1.addButton(tab1,"Good!", () => {alert("Die Antwort ist leider falsch!")})
-    review1.addButton(tab1,"Bad!", () => {codeContainer.append(review2.getHtml())})
+    review1.addButton(tab1,"Bad!", () => {codeContainer.append(review2.getHtml())
+    review1.unbindButtons();
+    review2.bindButtonsToKeys()})
 
 
     codeContainer.append(review1.getHtml())
+    review1.bindButtonsToKeys();
 
 
 
