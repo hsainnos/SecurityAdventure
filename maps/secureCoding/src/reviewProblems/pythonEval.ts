@@ -1,4 +1,5 @@
 import {ReviewObject} from "../ReviewObject.js";
+import {ProgressVariableNames} from "../ProgressVariableNames.js";
 
 $(function() {
 
@@ -37,7 +38,8 @@ $(function() {
         "    if op == '/':\n" +
         "        return num_1 / num_2\n","python")
 
-    review2.addButton(rev2Tab1, "Good", () => {alert("RICHTIG!")})
+    review2.addButton(rev2Tab1, "Good", () => {alert("RICHTIG!")
+        WA.state.saveVariable(ProgressVariableNames.pythonEvalProblem, true)})
 
 
 

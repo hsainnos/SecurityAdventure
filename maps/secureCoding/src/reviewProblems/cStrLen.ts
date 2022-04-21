@@ -1,4 +1,5 @@
 import {ReviewObject} from "../ReviewObject.js";
+import {ProgressVariableNames} from "../ProgressVariableNames.js";
 
 $(function() {
 
@@ -89,6 +90,7 @@ $(function() {
         "}\n","clike")
 
 
-    review2.addButton(rev2Tab3, "Good", () => {alert("RICHTIG!")})
+    review2.addButton(rev2Tab3, "Good", () => {alert("RICHTIG!")
+        WA.state.saveVariable(ProgressVariableNames.cStrLenProblem, true)})
 
 })

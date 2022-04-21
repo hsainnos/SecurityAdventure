@@ -1,4 +1,5 @@
 import {ReviewObject} from "../ReviewObject.js";
+import {ProgressVariableNames} from "../ProgressVariableNames.js";
 
 $(function() {
 
@@ -16,7 +17,8 @@ $(function() {
         "    except ValueError:\n" +
         "        print(\"bad input\")\n")
 
-    review1.addButton(tab1,"Good!", () => {alert("RICHTIG!!")})
+    review1.addButton(tab1,"Good!", () => {alert("RICHTIG!!")
+        WA.state.saveVariable(ProgressVariableNames.pythonFactorialProblem, true)})
     review1.addButton(tab1,"Bad!", () => {alert("FALSCH!!")})
 
 

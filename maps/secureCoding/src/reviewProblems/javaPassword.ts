@@ -1,5 +1,5 @@
 import {ReviewObject} from "../ReviewObject.js";
-
+import {ProgressVariableNames} from "../ProgressVariableNames.js";
 $(function() {
 
 
