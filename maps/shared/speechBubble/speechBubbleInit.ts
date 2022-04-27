@@ -3,10 +3,10 @@ $(function() {
     const body = $("body")
     WA.onInit().then(() => {
         WA.room.onEnterLayer(layerName).subscribe(() => {
-            body.show()
+            body.show("slow")
         })
         WA.room.onLeaveLayer(layerName).subscribe(() => {
-            body.hide()
+            body.hide("slow")
         });
     })
 })

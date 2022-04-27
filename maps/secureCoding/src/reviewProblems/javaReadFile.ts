@@ -1,5 +1,5 @@
 import {ReviewObject} from "../ReviewObject.js";
-import {ProgressVariableNames} from "../ProgressVariableNames.js";
+import {LEVEL_CONSTANTS} from "../../../shared/global/LevelConstants.js";
 
 $(function() {
 
@@ -26,7 +26,7 @@ $(function() {
         "}\n", "java")
 
     review1.addButton(tab1,"Good!", () => {alert("RICHTIG!!")
-        WA.state.saveVariable(ProgressVariableNames.javaReadFileProblem, true)})
+        WA.state.saveVariable(LEVEL_CONSTANTS.LEVEL_1.javaReadFileProblem.variableName, true)})
     review1.addButton(tab1,"Bad!", () => {alert("FALSCH!!")})
 
 

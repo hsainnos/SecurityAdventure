@@ -1,5 +1,5 @@
 import {ReviewObject} from "../ReviewObject.js";
-import {ProgressVariableNames} from "../ProgressVariableNames.js";
+import {LEVEL_CONSTANTS} from "../../../shared/global/LevelConstants.js";
 
 $(function() {
 
@@ -39,7 +39,7 @@ $(function() {
         "        return num_1 / num_2\n","python")
 
     review2.addButton(rev2Tab1, "Good", () => {alert("RICHTIG!")
-        WA.state.saveVariable(ProgressVariableNames.pythonEvalProblem, true)})
+        WA.state.saveVariable(LEVEL_CONSTANTS.LEVEL_1.pythonEvalProblem.variableName, true)})
 
 
 

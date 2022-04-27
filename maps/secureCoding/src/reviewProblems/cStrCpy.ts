@@ -1,5 +1,5 @@
 import {ReviewObject} from "../ReviewObject.js";
-import {ProgressVariableNames} from "../ProgressVariableNames.js";
+import {LEVEL_CONSTANTS} from "../../../shared/global/LevelConstants.js";
 
 $(function() {
 
@@ -92,6 +92,6 @@ $(function() {
 
 
     review2.addButton(rev2Tab3, "Good", () => {alert("RICHTIG!")
-        WA.state.saveVariable(ProgressVariableNames.cStrCpyProblem, true)})
+        WA.state.saveVariable(LEVEL_CONSTANTS.LEVEL_1.cStrCpyProblem.variableName, true)})
 
 })

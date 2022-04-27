@@ -1,5 +1,5 @@
 import {ReviewObject} from "../ReviewObject.js";
-import {ProgressVariableNames} from "../ProgressVariableNames.js";
+import {LEVEL_CONSTANTS} from "../../../shared/global/LevelConstants.js";
 
 $(function() {
 
@@ -18,7 +18,7 @@ $(function() {
         "        print(\"bad input\")\n")
 
     review1.addButton(tab1,"Good!", () => {alert("RICHTIG!!")
-        WA.state.saveVariable(ProgressVariableNames.pythonFactorialProblem, true)})
+        WA.state.saveVariable(LEVEL_CONSTANTS.LEVEL_1.pythonFactorialProblem.variableName, true)})
     review1.addButton(tab1,"Bad!", () => {alert("FALSCH!!")})
 
 
