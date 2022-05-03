@@ -202,12 +202,6 @@
          "id":3,
          "name":"exit",
          "opacity":0,
-         "properties":[
-                {
-                 "name":"exitUrl",
-                 "type":"string",
-                 "value":"map.json"
-                }],
          "type":"tilelayer",
          "visible":true,
          "width":50,
