@@ -12,6 +12,8 @@ let TextFiles: any = TextFilesGerman;
 let currentItem: any = undefined;
 let currentTriggerMessage: any = undefined;
 
+WA.ui.openPopup("popUp_elevator", elevator.getCurrentLevel().toString(), []);
+
 WA.room.onEnterLayer("Interact_remote_Down").subscribe(() => {
     currentTriggerMessage = WA.ui.displayActionMessage({
         message: TextFiles.elevator_interact_message,

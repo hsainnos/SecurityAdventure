@@ -3493,7 +3493,7 @@
                         {
                          "name":"url",
                          "type":"string",
-                         "value":".\/html\/speechBubbles\/bubble_0_reception.html"
+                         "value":".\/html\/speechBubbles_floor_0\/bubble_0_reception.html"
                         }],
                  "rotation":0,
                  "type":"website",
@@ -3515,14 +3515,14 @@
                         {
                          "name":"url",
                          "type":"string",
-                         "value":".\/html\/speechBubbles\/bubble_0_4.html"
+                         "value":".\/html\/speechBubbles_floor_0\/bubble_0_4.html"
                         }],
                  "rotation":0,
                  "type":"website",
                  "visible":true,
                  "width":346.666666666666,
-                 "x":522.666666666666,
-                 "y":1067.33333333334
+                 "x":523.333333333333,
+                 "y":1091.33333333334
                 }, 
                 {
                  "height":254.666666666667,
@@ -3537,14 +3537,14 @@
                         {
                          "name":"url",
                          "type":"string",
-                         "value":".\/html\/speechBubbles\/bubble_0_3.html"
+                         "value":".\/html\/speechBubbles_floor_0\/bubble_0_3.html"
                         }],
                  "rotation":0,
                  "type":"website",
                  "visible":true,
                  "width":370,
-                 "x":548,
-                 "y":1308.16666666666
+                 "x":554.666666666667,
+                 "y":1216.16666666666
                 }, 
                 {
                  "height":224,
@@ -3559,14 +3559,14 @@
                         {
                          "name":"url",
                          "type":"string",
-                         "value":".\/html\/speechBubbles\/bubble_0_1.html"
+                         "value":".\/html\/speechBubbles_floor_0\/bubble_0_1.html"
                         }],
                  "rotation":0,
                  "type":"website",
                  "visible":true,
                  "width":354,
-                 "x":725.333333333334,
-                 "y":1229.00000000001
+                 "x":724.666666666667,
+                 "y":1245.00000000001
                 }, 
                 {
                  "height":252.666666666666,
@@ -3581,14 +3581,14 @@
                         {
                          "name":"url",
                          "type":"string",
-                         "value":".\/html\/speechBubbles\/bubble_0_2.html"
+                         "value":".\/html\/speechBubbles_floor_0\/bubble_0_2.html"
                         }],
                  "rotation":0,
                  "type":"website",
                  "visible":true,
                  "width":433.333333333333,
-                 "x":1042.66666666667,
-                 "y":1096
+                 "x":1025.33333333334,
+                 "y":1110
                 }, 
                 {
                  "height":242,
@@ -3603,14 +3603,14 @@
                         {
                          "name":"url",
                          "type":"string",
-                         "value":".\/html\/speechBubbles\/bubble_0_5.html"
+                         "value":".\/html\/speechBubbles_floor_0\/bubble_0_5.html"
                         }],
                  "rotation":0,
                  "type":"website",
                  "visible":true,
                  "width":398,
-                 "x":906.666666666667,
-                 "y":1302
+                 "x":908,
+                 "y":1240.66666666667
                 }, 
                 {
                  "height":24,
@@ -3824,7 +3824,7 @@
         {
          "name":"script",
          "type":"string",
-         "value":"..\/dist\/securityVulnerabilities\/src\/starter.js"
+         "value":"..\/dist\/securityVulnerabilities\/src\/map.js"
         }],
  "renderorder":"right-down",
  "tiledversion":"1.8.4",
