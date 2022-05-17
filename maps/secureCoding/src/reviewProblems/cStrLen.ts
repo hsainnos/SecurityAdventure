@@ -7,7 +7,7 @@ $(function() {
 
 
     let codeContainer = $("#code-container")
-    codeContainer.trigger("focus");
+    //codeContainer.trigger("focus");
     let review1 : ReviewObject = new ReviewObject()
     let tab1 = review1.createTabWithCode(false,    "#include <stdio.h>"+"\n" +
         "#include <stdio.h>" +
@@ -20,9 +20,13 @@ $(function() {
         "}\n", "clike")
 
     review1.addButton(tab1,"Good!", () => {alert("FALSCH")})
-    review1.addButton(tab1,"Bad!", () => {codeContainer.append(review2.getHtml())
+    review1.addButton(tab1,"Bad!", () => {
+        codeContainer.empty()
+        codeContainer.append(review1.getHtml())
+        codeContainer.append(review2.getHtml())
         review1.unbindButtons();
-        review2.bindButtonsToKeys()})
+        review2.bindButtonsToKeys()
+    })
 
 
 
@@ -93,6 +97,11 @@ $(function() {
 
     review2.addButton(rev2Tab3, "Good", () => {
         WA.state.saveVariable(LEVEL_CONSTANTS.LEVEL_1.cStrLenProblem.variableName, true)
+
+        review2.tabContainer.makeTabActive(rev2Tab3);
+        codeContainer.empty()
+        codeContainer.append(review1.getHtml())
+        codeContainer.append(review2.getHtml())
         codeContainer.append(new InfoText("RichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtig", "Explanation",true).getHtml().html())
     })
 

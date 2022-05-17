@@ -15,6 +15,8 @@ export class Tab {
     }
 
 
+    changeName = (tabName : string) => {this.tabName = tabName };
+
     makeTabActive = () => {
         this.active = true
     };

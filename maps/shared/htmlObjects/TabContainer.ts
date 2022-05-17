@@ -39,6 +39,21 @@ let nav = $("<nav></nav>")
         this.tabs.push(tab)
     };
 
+
+    makeTabActive = (tab : Tab) => {
+
+        if(this.tabs.indexOf(tab) == -1){
+            return
+        }
+
+        let activeIndex = this.tabs.findIndex((tab) =>{
+            return tab.active;
+        })
+
+        this.tabs[activeIndex].makeTabInactive()
+        tab.makeTabActive()
+    };
+
     makeNextTabActive = () => {
 
         let activeIndex = this.tabs.findIndex((tab) =>{
@@ -60,6 +75,8 @@ let nav = $("<nav></nav>")
 
     makeTabsValid = (oneTabMustBeActive : boolean = false) => {
         let tabActiveCounter = 0
+
+
 
         this.tabs.forEach((tab) => {
 

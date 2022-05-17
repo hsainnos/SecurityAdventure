@@ -1,4 +1,6 @@
 import {ReviewObject} from "../ReviewObject.js";
+import {LEVEL_CONSTANTS} from "../../../shared/global/LevelConstants.js";
+import {InfoText} from "../../../shared/htmlObjects/InfoText.js";
 
 $(function() {
 
@@ -30,9 +32,13 @@ $(function() {
         "}\n", "java")
 
     review1.addButton(tab1,"Good!", () => {alert("Die Antwort ist leider falsch!")})
-    review1.addButton(tab1,"Bad!", () => {codeContainer.append(review2.getHtml())
+    review1.addButton(tab1,"Bad!", () => {
+        codeContainer.empty()
+        codeContainer.append(review1.getHtml())
+        codeContainer.append(review2.getHtml())
         review1.unbindButtons();
-        review2.bindButtonsToKeys()})
+        review2.bindButtonsToKeys()
+    })
 
 
 
@@ -137,7 +143,15 @@ $(function() {
         "}\n","java")
 
 
-    review2.addButton(rev2Tab3, "Good", () => {alert("FALSCH!")})
+    review2.addButton(rev2Tab3, "Good", () => {
+        codeContainer.empty()
+        review2.tabContainer.makeTabActive(rev2Tab3);
+        codeContainer.append(review1.getHtml())
+        codeContainer.append(review2.getHtml())
+        WA.state.saveVariable(LEVEL_CONSTANTS.LEVEL_1.javaSocketProblem.variableName, true)
+        codeContainer.append(new InfoText("RichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtig", "Explanation",true).getHtml().html())
+
+    })
 //codeReviewApi.addReviewObjectsToHtmlElement(phase1Element, codeArray)
 })
 

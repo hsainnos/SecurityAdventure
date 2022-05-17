@@ -6,7 +6,7 @@ $(function() {
 
 
     let codeContainer = $("#code-container")
-    codeContainer.trigger("focus");
+    //codeContainer.trigger("focus");
     let review1 : ReviewObject = new ReviewObject()
     let tab1 = review1.createTabWithCode(true,    "import math\n" +
         "\n" +
@@ -20,6 +20,9 @@ $(function() {
 
     review1.addButton(tab1,"Good!", () => {
         WA.state.saveVariable(LEVEL_CONSTANTS.LEVEL_1.pythonFactorialProblem.variableName, true)
+
+        codeContainer.empty()
+        codeContainer.append(review1.getHtml())
         codeContainer.append(new InfoText("RichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtig", "Explanation",true).getHtml().html())
     })
     review1.addButton(tab1,"Bad!", () => {alert("FALSCH!!")})
