@@ -1,5 +1,6 @@
 import {ReviewObject} from "../ReviewObject.js";
 import {LEVEL_CONSTANTS} from "../../../shared/global/LevelConstants.js";
+import {InfoText} from "../../../shared/htmlObjects/InfoText.js";
 
 $(function() {
 
@@ -91,7 +92,9 @@ $(function() {
         "}\n","clike")
 
 
-    review2.addButton(rev2Tab3, "Good", () => {alert("RICHTIG!")
-        WA.state.saveVariable(LEVEL_CONSTANTS.LEVEL_1.cStrCpyProblem.variableName, true)})
+    review2.addButton(rev2Tab3, "Good", () => {
+        WA.state.saveVariable(LEVEL_CONSTANTS.LEVEL_1.cStrCpyProblem.variableName, true)
+        codeContainer.append(new InfoText("RichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtig", "Explanation",true).getHtml().html())
+    })
 
 })

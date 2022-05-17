@@ -1,5 +1,6 @@
 import {ReviewObject} from "../ReviewObject.js";
 import {LEVEL_CONSTANTS} from "../../../shared/global/LevelConstants.js";
+import {InfoText} from "../../../shared/htmlObjects/InfoText.js";
 
 $(function() {
 
@@ -52,8 +53,10 @@ $(function() {
         "\n" +
         "    return num_1 / num_2\n")
 
-    review2.addButton(rev2Tab1, "Good", () => {alert("RICHTIG!")
-        WA.state.saveVariable(LEVEL_CONSTANTS.LEVEL_1.pythonInputValidationProblem.variableName, true)})
+    review2.addButton(rev2Tab1, "Good", () => {
+        WA.state.saveVariable(LEVEL_CONSTANTS.LEVEL_1.pythonInputValidationProblem.variableName, true)
+        codeContainer.append(new InfoText("RichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtig", "Explanation",true).getHtml().html())
+    })
 
 
 

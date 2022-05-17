@@ -1,5 +1,6 @@
 import {ReviewObject} from "../ReviewObject.js";
 import {LEVEL_CONSTANTS} from "../../../shared/global/LevelConstants.js";
+import {InfoText} from "../../../shared/htmlObjects/InfoText.js";
 
 $(function() {
 
@@ -17,8 +18,10 @@ $(function() {
         "    except ValueError:\n" +
         "        print(\"bad input\")\n")
 
-    review1.addButton(tab1,"Good!", () => {alert("RICHTIG!!")
-        WA.state.saveVariable(LEVEL_CONSTANTS.LEVEL_1.pythonFactorialProblem.variableName, true)})
+    review1.addButton(tab1,"Good!", () => {
+        WA.state.saveVariable(LEVEL_CONSTANTS.LEVEL_1.pythonFactorialProblem.variableName, true)
+        codeContainer.append(new InfoText("RichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtig", "Explanation",true).getHtml().html())
+    })
     review1.addButton(tab1,"Bad!", () => {alert("FALSCH!!")})
 
 

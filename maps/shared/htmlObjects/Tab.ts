@@ -25,14 +25,20 @@ export class Tab {
 
     makeTabDomElementInactive = () => {
         this.makeTabInactive()
-        $("#tab" +this.id).removeClass("active")
-        $("#tabHeader" +this.id).removeClass("active")
+        let tabElement = $("#tab-" +this.id)
+        tabElement.removeClass("active")
+        tabElement.attr("aria-selected", "false");
+        $("#"+this.id).removeClass("active")
     };
 
     makeTabDomElementActive = () => {
         this.makeTabActive()
-        $("#tab" +this.id).addClass("active")
-        $("#tabHeader" +this.id).addClass("active")
+
+        let tabElement = $("#tab-" + this.id)
+        tabElement.addClass("active")
+        tabElement.addClass("BLABLABLA")
+        tabElement.attr("aria-selected", "true");
+        $("#"+this.id).addClass("active")
     };
 
     addTabContent = (identifier: string, element: HtmlObject) => {
@@ -53,7 +59,7 @@ export class Tab {
         })
     };
 
-    getHtmlContent = (): JQuery => {
+    /*getHtmlContent = (): JQuery => {
         let htmlContent: JQuery
 
         if (this.active) {
@@ -68,19 +74,57 @@ export class Tab {
         })
         return htmlContent
 
+    };*/
+
+
+    getHtmlContent = (): JQuery => {
+
+
+        let navContent = $("<div></div>")
+
+        navContent.addClass("tab-pane fade show");
+        navContent.attr("id", this.id);
+        navContent.attr("role", "tabpanel");
+        navContent.attr("aria-labelledby", "tab-" + this.id);
+
+
+        if(this.active){
+            navContent.addClass("active");
+        }
+
+        this.tabContents.forEach((tabContent) => {
+            navContent.append(tabContent.element.getHtml())
+        })
+
+        return navContent
+
+
+
     };
 
 
     getHtmlHeader = (): JQuery => {
-        let htmlHeader: JQuery
 
-        if (this.active) {
-            htmlHeader = $("<li class='active'>" + "<a href='#tab" + this.id + "'  data-toggle='tab'>" + this.tabName + "</a></li>")
-        } else {
-            htmlHeader = $("<li>" + "<a href='#tab" + this.id + "' data-toggle='tab'>" + this.tabName + "</a></li>")
+
+        let navButton = $("<button></button>")
+        navButton.addClass("nav-link");
+        navButton.attr("id", "tab-" + this.id);
+        navButton.attr("data-bs-toggle", "tab");
+        navButton.attr("data-bs-target", "#" + this.id);
+        navButton.attr("type", "button");
+        navButton.attr("role", "tab");
+        navButton.attr("aria-controls", this.id);
+        navButton.attr("aria-selected", "false");
+
+        navButton.text(this.tabName);
+
+        if(this.active){
+
+            navButton.addClass("active");
+            navButton.attr("aria-selected", "true");
         }
-        htmlHeader.attr('id', "tabHeader" + this.id);
-        return htmlHeader
+
+        return navButton;
     };
 
 }

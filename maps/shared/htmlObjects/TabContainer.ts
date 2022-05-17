@@ -10,13 +10,18 @@ export class TabContainer implements HtmlObject{
     getHtml = (): JQuery => {
 
 
+let nav = $("<nav></nav>")
 
-        let htmlHeader = $("<ul class='nav nav-tabs'></ul>")
+        let htmlHeader = $("<div class='nav nav-tabs'></div>")
+        htmlHeader.attr("role", "tablist");
+
         let htmlContent = $("<div class='tab-content'></div>")
 
         //alert(this.tabs[0].getHtmlContent().html())
 
         this.makeTabsValid(true)
+
+
 
         this.tabs.forEach((tab) => {
 
@@ -25,7 +30,9 @@ export class TabContainer implements HtmlObject{
 
         })
 
-        return $("<div></div>").append(htmlHeader).append(htmlContent)
+        nav.append(htmlHeader);
+
+        return $("<div></div>").append(nav).append(htmlContent)
     };
 
     addTab = (tab : Tab) => {
