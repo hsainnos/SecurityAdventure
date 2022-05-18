@@ -1007,7 +1007,7 @@
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
          "height":50,
          "id":57,
-         "name":"Interact_Fernbedienung_Up",
+         "name":"interact_up",
          "opacity":0,
          "properties":[
                 {
@@ -1074,7 +1074,7 @@
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
          "height":50,
          "id":50,
-         "name":"Interact_Fernbedienung_Down",
+         "name":"interact_down",
          "opacity":0,
          "properties":[
                 {
@@ -2486,10 +2486,10 @@
         {
          "name":"script",
          "type":"string",
-         "value":"Scripts\/level5.js"
+         "value":"..\/dist\/securityVulnerabilities\/src\/level5.js"
         }],
  "renderorder":"right-down",
- "tiledversion":"1.8.4",
+ "tiledversion":"1.8.5",
  "tileheight":32,
  "tilesets":[
         {
