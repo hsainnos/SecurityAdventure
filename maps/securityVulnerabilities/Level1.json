@@ -6229,26 +6229,48 @@
                  "y":1398.5
                 }, 
                 {
-                 "height":77.3333333333333,
+                 "height":255.333333333333,
                  "id":19,
                  "name":"paper",
+                 "properties":[
+                        {
+                         "name":"allowApi",
+                         "type":"bool",
+                         "value":true
+                        }, 
+                        {
+                         "name":"url",
+                         "type":"string",
+                         "value":".\/html\/speechBubbles_floor_1\/popUp_1_paper.html"
+                        }],
                  "rotation":0,
-                 "type":"",
+                 "type":"website",
                  "visible":true,
-                 "width":120,
-                 "x":658,
-                 "y":866
+                 "width":382,
+                 "x":620,
+                 "y":825
                 }, 
                 {
-                 "height":88.6666666666667,
+                 "height":262.666666666667,
                  "id":21,
                  "name":"Kylo",
+                 "properties":[
+                        {
+                         "name":"allowApi",
+                         "type":"bool",
+                         "value":true
+                        }, 
+                        {
+                         "name":"url",
+                         "type":"string",
+                         "value":".\/html\/speechBubbles_floor_1\/popUp_1_kylo.html"
+                        }],
                  "rotation":0,
-                 "type":"",
+                 "type":"website",
                  "visible":true,
-                 "width":138,
-                 "x":1298,
-                 "y":1381.33333333333
+                 "width":389,
+                 "x":1282,
+                 "y":1286.33333333333
                 }, 
                 {
                  "height":0,
