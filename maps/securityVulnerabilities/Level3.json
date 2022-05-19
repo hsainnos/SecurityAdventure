@@ -5683,26 +5683,48 @@
                  "y":922.333333333333
                 }, 
                 {
-                 "height":94.6666666666665,
+                 "height":433.333333333333,
                  "id":9,
                  "name":"quest_3_2",
+                 "properties":[
+                        {
+                         "name":"allowApi",
+                         "type":"bool",
+                         "value":true
+                        }, 
+                        {
+                         "name":"url",
+                         "type":"string",
+                         "value":".\/html\/speechBubbles_floor_3\/popUp_3_quest_2.html"
+                        }],
                  "rotation":0,
-                 "type":"",
+                 "type":"website",
                  "visible":true,
-                 "width":152,
-                 "x":902.666666666667,
-                 "y":1802.66666666667
+                 "width":612,
+                 "x":745.333333333334,
+                 "y":1626.66666666667
                 }, 
                 {
-                 "height":108,
+                 "height":430.666666666667,
                  "id":10,
                  "name":"quest_3_3",
+                 "properties":[
+                        {
+                         "name":"allowApi",
+                         "type":"bool",
+                         "value":true
+                        }, 
+                        {
+                         "name":"url",
+                         "type":"string",
+                         "value":".\/html\/speechBubbles_floor_3\/popUp_3_quest_3.html"
+                        }],
                  "rotation":0,
-                 "type":"",
+                 "type":"website",
                  "visible":true,
-                 "width":174.666666666667,
-                 "x":1604.16666666667,
-                 "y":1685.5
+                 "width":609.333333333334,
+                 "x":1722.83333333334,
+                 "y":1598.83333333333
                 }, 
                 {
                  "height":0,
@@ -6153,7 +6175,7 @@
          "value":"..\/dist\/securityVulnerabilities\/src\/level3.js"
         }],
  "renderorder":"right-down",
- "tiledversion":"1.8.5",
+ "tiledversion":"1.8.4",
  "tileheight":32,
  "tilesets":[
         {
