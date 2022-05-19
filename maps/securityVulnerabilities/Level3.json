@@ -5661,15 +5661,26 @@
                  "y":1680.66666666666
                 }, 
                 {
-                 "height":98.6666666666665,
+                 "height":438.833333333333,
                  "id":8,
                  "name":"quest_3_1",
+                 "properties":[
+                        {
+                         "name":"allowApi",
+                         "type":"bool",
+                         "value":true
+                        }, 
+                        {
+                         "name":"url",
+                         "type":"string",
+                         "value":".\/html\/speechBubbles_floor_3\/popUp_3_quest_1.html"
+                        }],
                  "rotation":0,
-                 "type":"",
+                 "type":"website",
                  "visible":true,
-                 "width":164,
-                 "x":917.333333333334,
-                 "y":1088
+                 "width":616.833333333333,
+                 "x":749.333333333334,
+                 "y":922.333333333333
                 }, 
                 {
                  "height":94.6666666666665,

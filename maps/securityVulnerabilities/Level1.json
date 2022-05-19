@@ -5969,15 +5969,15 @@
          "name":"floorLayer",
          "objects":[
                 {
-                 "height":74.5,
+                 "height":220.5,
                  "id":2,
                  "name":"popUp_1_notebook",
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":123.5,
-                 "x":623.5,
-                 "y":309
+                 "width":374.166666666667,
+                 "x":571.5,
+                 "y":189.666666666667
                 }, 
                 {
                  "height":258,
@@ -6543,7 +6543,7 @@
          "value":"Scripts\/level1.js"
         }],
  "renderorder":"right-down",
- "tiledversion":"1.8.4",
+ "tiledversion":"1.8.5",
  "tileheight":32,
  "tilesets":[
         {
