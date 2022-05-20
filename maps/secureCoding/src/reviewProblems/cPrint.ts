@@ -1,13 +1,14 @@
 import {ReviewObject} from "../ReviewObject.js";
 import {LEVEL_CONSTANTS} from "../../../shared/global/LevelConstants.js";
+import {InfoText} from "../../../shared/htmlObjects/InfoText.js";
 
 $(function() {
 
 
     let codeContainer = $("#code-container")
-    codeContainer.trigger("focus");
+    //codeContainer.trigger("focus");
     let review1 : ReviewObject = new ReviewObject()
-    let tab1 = review1.createTabWithCode(true,    "#include <stdio.h>\n" +
+    let tab1 = review1.createTabWithCode(false,    "#include <stdio.h>\n" +
         "\n" +
         "    int main() {\n" +
         "\n" +
@@ -19,8 +20,12 @@ $(function() {
         "        return 0;\n" +
         "}\n", "clike")
 
-    review1.addButton(tab1,"Good!", () => {alert("RICHTIG!!")
-    WA.state.saveVariable(LEVEL_CONSTANTS.LEVEL_1.cPrintProblem.variableName, true)})
+    review1.addButton(tab1,"Good!", () => {
+        codeContainer.empty()
+        codeContainer.append(review1.getHtml())
+    WA.state.saveVariable(LEVEL_CONSTANTS.LEVEL_1.cPrintProblem.variableName, true)
+    codeContainer.append(new InfoText("RichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtig",  "Explanation:",true, "AWESOME!").getHtml().html())
+    })
     review1.addButton(tab1,"Bad!", () => {alert("FALSCH!!")})
 
 

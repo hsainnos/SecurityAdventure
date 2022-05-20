@@ -8,7 +8,6 @@ import {changeTabKey, keysToMap} from "../../shared/global/config.js";
 export class ReviewObject {
 
     tabContainer = new TabContainer()
-    tabCount = 1
     activeBindFunctions: ((e: KeyboardEvent) => void)[] = [];
 
 
@@ -17,9 +16,10 @@ export class ReviewObject {
         tab.addTabContent("button", button)
     }
 
-    createTabWithCode(active: boolean, code: string, language: string = "javascript"): Tab {
+    createTabWithCode(active: boolean, code: string, language: string = "javascript", tabName : string = "Problem"): Tab {
+        let tab = new Tab(tabName);
 
-        let tab = new Tab("Tab " + this.tabCount++)
+
         let codeBox = new CodeBox(code, language)
         tab.addTabContent("codeBox", codeBox)
 
@@ -28,8 +28,22 @@ export class ReviewObject {
         }
         this.tabContainer.addTab(tab)
 
+        let tabsCount = this.tabContainer.tabs.length;
+
+        if(tabsCount > 1){
+            let tabCounter = 1
+
+            this.tabContainer.tabs.forEach((tab) =>{
+                tab.changeName(tabName + " " + tabCounter++)
+            })
+        }
+
+
+
         return tab
     }
+
+
 
 
     getHtml(): JQuery {

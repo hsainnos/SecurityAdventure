@@ -1,17 +1,21 @@
 import {ReviewObject} from "../ReviewObject.js";
 import {LEVEL_CONSTANTS} from "../../../shared/global/LevelConstants.js";
+import {InfoText} from "../../../shared/htmlObjects/InfoText.js";
 
 $(function() {
 
 
     let codeContainer = $("#code-container")
-    codeContainer.trigger("focus");
+   // codeContainer.trigger("focus");
     let review1 : ReviewObject = new ReviewObject()
     let tab1 = review1.createTabWithCode(true,    "def cal(num_1, op, num_2):\n" +
         "    return eval(f'{num_1} {op} {num_2}')\n", "python")
 
     review1.addButton(tab1,"Good!", () => {alert("Die Antwort ist leider falsch!")})
-    review1.addButton(tab1,"Bad!", () => {codeContainer.append(review2.getHtml())
+    review1.addButton(tab1,"Bad!", () => {
+        codeContainer.empty()
+        codeContainer.append(review1.getHtml())
+        codeContainer.append(review2.getHtml())
         review1.unbindButtons();
         review2.bindButtonsToKeys()})
 
@@ -38,8 +42,15 @@ $(function() {
         "    if op == '/':\n" +
         "        return num_1 / num_2\n","python")
 
-    review2.addButton(rev2Tab1, "Good", () => {alert("RICHTIG!")
-        WA.state.saveVariable(LEVEL_CONSTANTS.LEVEL_1.pythonEvalProblem.variableName, true)})
+    review2.addButton(rev2Tab1, "Good", () => {
+        WA.state.saveVariable(LEVEL_CONSTANTS.LEVEL_1.pythonEvalProblem.variableName, true)
+
+        review2.tabContainer.makeTabActive(rev2Tab1);
+        codeContainer.empty()
+        codeContainer.append(review1.getHtml())
+        codeContainer.append(review2.getHtml())
+        codeContainer.append(new InfoText("RichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtig", "Explanation",true).getHtml().html())
+    })
 
 
 

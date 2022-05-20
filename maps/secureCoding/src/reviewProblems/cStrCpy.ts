@@ -1,12 +1,13 @@
 import {ReviewObject} from "../ReviewObject.js";
 import {LEVEL_CONSTANTS} from "../../../shared/global/LevelConstants.js";
+import {InfoText} from "../../../shared/htmlObjects/InfoText.js";
 
 $(function() {
 
 
 
     let codeContainer = $("#code-container")
-    codeContainer.trigger("focus");
+    //codeContainer.trigger("focus");
     let review1 : ReviewObject = new ReviewObject()
     let tab1 = review1.createTabWithCode(false,    "#include <stdio.h>"+"\n" +
         "#include <string.h>\n" +
@@ -20,7 +21,10 @@ $(function() {
         "}\n", "clike")
 
     review1.addButton(tab1,"Good!", () => {alert("Die Antwort ist leider falsch!")})
-    review1.addButton(tab1,"Bad!", () => {codeContainer.append(review2.getHtml())
+    review1.addButton(tab1,"Bad!", () => {
+        codeContainer.empty()
+        codeContainer.append(review1.getHtml())
+        codeContainer.append(review2.getHtml())
         review1.unbindButtons();
         review2.bindButtonsToKeys()})
 
@@ -91,7 +95,13 @@ $(function() {
         "}\n","clike")
 
 
-    review2.addButton(rev2Tab3, "Good", () => {alert("RICHTIG!")
-        WA.state.saveVariable(LEVEL_CONSTANTS.LEVEL_1.cStrCpyProblem.variableName, true)})
+    review2.addButton(rev2Tab3, "Good", () => {
+        codeContainer.empty()
+        review2.tabContainer.makeTabActive(rev2Tab3);
+        codeContainer.append(review1.getHtml())
+        codeContainer.append(review2.getHtml())
+        WA.state.saveVariable(LEVEL_CONSTANTS.LEVEL_1.cStrCpyProblem.variableName, true)
+        codeContainer.append(new InfoText("RichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtig", "Explanation",true).getHtml().html())
+    })
 
 })
