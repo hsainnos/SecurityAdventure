@@ -101,7 +101,8 @@ WA.room.onEnterLayer("USB_Quest_Wrong_Zone").subscribe(() => {
             callback: () => {
                 // TODO: not possible with this engine version
                 // currentItem = WA.ui.openPopup("USB_quest_wrong", "", [], "virus");
-                currentItem = WA.ui.openPopup("USB_quest_wrong", "virus", [])
+                /*currentItem = WA.ui.openPopup("USB_quest_wrong", "virus", [])*/
+
                 pickedUp = false;
                 WA.room.showLayer("USB");
                 // TODO: not possible with this engine version
