@@ -20,7 +20,7 @@ function execute() {
     if (value === right_password.innerText) {
 
 
-        document.body.innerHTML = '                   <div class="success-desktop-background">\n' +
+        document.body.innerHTML = '<div class="success-desktop-background">\n' +
             '                       <div class="success-symbol-layer">\n' +
             '                           <div class="success-time"></div>\n' +
             '                           <div class="success-power"></div>\n' +
