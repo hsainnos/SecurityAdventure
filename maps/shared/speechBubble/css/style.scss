@@ -356,7 +356,8 @@ $px $px $black;
   padding: 8px;
   font-size: 6px;
   font-family: 'Press Start 2P', serif;
-  width: 338px;
+  //width: 338px;
+  width: 318px;
   border: 2px solid black;
   background-color: whitesmoke;
 }
@@ -479,13 +480,10 @@ $px $px $black;
 }
 
 @font-face {
-  font-family: "Twemoji Mozilla";
-  src: url("./fonts/TwemojiMozilla.ttf") format('truetype');
+  font-family: "Press Start 2P";
+  src: url("./PressStart2P.ttf") format('truetype');
 }
 
-*{
-  font-family: PixelFont-7,monospace;
-}
 
 .nes-btn {
   font-family: "Press Start 2P";
