@@ -1,4 +1,3 @@
-import {Console} from "../../../shared/htmlObjects/Console.js";
 import {CodeAnalysisObject} from "../CodeAnalysisObject.js";
 
 $(function() {
