@@ -251,6 +251,17 @@
                  "id":31,
                  "name":"C_1",
                  "opacity":1,
+                 "properties":[
+                        {
+                         "name":"openWebsite",
+                         "type":"string",
+                         "value":".\/html\/problems\/pointerC.html"
+                        }, 
+                        {
+                         "name":"openWebsiteAllowApi",
+                         "type":"bool",
+                         "value":true
+                        }],
                  "type":"tilelayer",
                  "visible":true,
                  "width":30,
@@ -1017,8 +1028,19 @@
  "nextlayerid":35,
  "nextobjectid":1,
  "orientation":"orthogonal",
+ "properties":[
+        {
+         "name":"openWebsiteAllowApi",
+         "type":"bool",
+         "value":true
+        }, 
+        {
+         "name":"script",
+         "type":"string",
+         "value":"..\/dist\/code_analysis\/src\/starter.js"
+        }],
  "renderorder":"right-down",
- "tiledversion":"1.8.4",
+ "tiledversion":"1.8.5",
  "tileheight":32,
  "tilesets":[
         {
