@@ -31,8 +31,8 @@ WA.room.onEnterLayer("Kylo_Dehighlight_Zone").subscribe(() => {
 
 WA.room.onEnterLayer("F1_Notebook").subscribe( () => {
     currentTriggerMessage = WA.ui.openPopup("popUp_1_notebook", TextFiles.f1_notebook, []);
-    var mySound = WA.sound.loadSound("./augh.ogg")
-    var config = {
+    const mySound = WA.sound.loadSound("./augh.ogg")
+    const config = {
         volume : 0.5,
         loop : false,
         rate : 1,
