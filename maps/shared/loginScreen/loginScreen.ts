@@ -1,5 +1,42 @@
 const password = document.getElementById('link') as HTMLElement
 const input = document.getElementById('password') as HTMLInputElement
+const login = document.getElementById('login') as HTMLElement
+
+const button_container = document.getElementById('button-container') as HTMLElement
+
+const button1 = document.getElementById('button_1') as HTMLButtonElement
+const button2 = document.getElementById('button_2') as HTMLButtonElement
+const button3 = document.getElementById('button_3') as HTMLButtonElement
+
+
+WA.state.onVariableChange('quest_1_1_visible').subscribe(() => {
+    login.hidden = false
+    button_container.hidden = false
+})
+
+WA.state.onVariableChange('quest_1_2_visible').subscribe(() => {
+    login.hidden = false
+    button_container.hidden = false
+
+})
+
+WA.state.onVariableChange('quest_1_3_visible').subscribe(() => {
+    login.hidden = false
+    button_container.hidden = false
+
+})
+
+button2.addEventListener('click', function () {
+    input.value = button2.innerText
+})
+
+button1.addEventListener('click', function () {
+    input.value = button1.innerText
+})
+
+button3.addEventListener('click', function () {
+    input.value = button3.innerText
+})
 
 
 password.addEventListener('click', function () {

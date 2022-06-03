@@ -753,6 +753,13 @@ p[class^="from-"].emoji::before {
   background-color: red;
 }
 
+.button.is-neutral {
+  background-color: white;
+  color: #0f0f0f;
+
+}
+
+.button.is-neutral:hover {background-color: gray}
 .button.is-success:hover {background-color: #3e8e41}
 .button.is-error:hover {background-color: darkred}
 

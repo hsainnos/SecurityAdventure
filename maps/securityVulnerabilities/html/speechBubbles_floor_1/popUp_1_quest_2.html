@@ -8,18 +8,23 @@
     <script type="module" src="../../../dist/shared/loginScreen/loginScreen.js"></script>
 </head>
 <body hidden>
-<div class="login-desktop-background" id="login">
+<div class="login-desktop-background" id="login" hidden>
     <div class="login-box">
         <div class="login-text"></div>
         <div class="login-watermelon"></div>
         <div class="login-input-box">
-            <input id="password" class="login-input" placeholder="Passwort"/>
+            <input id="password" class="login-input" placeholder="Passwort" readonly/>
             <div id="right-password" hidden>1234</div>
             <div class="login-input-button">
                 <span id="link" class="login-link"></span>
             </div>
         </div>
     </div>
+</div>
+<div id="button-container" hidden>
+    <button type="button" id="button_1" class="button is-neutral" >12345</button>
+    <button type="button" id="button_2" class="button is-neutral" >abcd</button>
+    <button type="button" id="button_3" class="button is-neutral" >1234</button>
 </div>
 <div id="layerName" hidden>Quest_1_2</div>
 </body>

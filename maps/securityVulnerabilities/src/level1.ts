@@ -13,6 +13,18 @@ let quest_3: boolean = false;
 WA.room.hideLayer("Paper_Highlight");
 WA.room.hideLayer("Kylo_Highlight");
 
+WA.room.onEnterLayer("Kylo_Popup").subscribe(() => {
+    WA.state.saveVariable('quest_1_3_visible', true)
+})
+
+WA.room.onEnterLayer("Paper_Pickup").subscribe(() => {
+    WA.state.saveVariable('quest_1_1_visible', true)
+})
+
+WA.room.onEnterLayer("Feature l").subscribe(() => {
+    WA.state.saveVariable('quest_1_2_visible', true)
+})
+
 WA.room.onEnterLayer("Paper_Highlight_Zone").subscribe(() => {
     WA.room.showLayer("Paper_Highlight");
 });
