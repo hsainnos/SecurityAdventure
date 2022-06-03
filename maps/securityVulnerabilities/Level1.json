@@ -6540,10 +6540,10 @@
         {
          "name":"script",
          "type":"string",
-         "value":"Scripts\/level1.js"
+         "value":"..\/dist\/securityVulnerabilities\/src\/level1.js"
         }],
  "renderorder":"right-down",
- "tiledversion":"1.8.4",
+ "tiledversion":"1.8.5",
  "tileheight":32,
  "tilesets":[
         {
