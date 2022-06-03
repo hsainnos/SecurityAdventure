@@ -1,6 +1,7 @@
 import {elevator} from "../../shared/elevator/elevator.js"
 import {TextFilesGerman} from "../../shared/TextFiles/TextFilesGerman.js";
 import {TextFilesEnglish} from "../../shared/TextFiles/TextFilesEnglish.js";
+import "./augh.ogg"
 
 let TextFiles: any = TextFilesGerman;
 let currentItem: any = undefined;
