@@ -5731,6 +5731,12 @@
                  "id":11,
                  "name":"quest_3_1",
                  "point":true,
+                 "properties":[
+                        {
+                         "name":"persist",
+                         "type":"bool",
+                         "value":true
+                        }],
                  "rotation":0,
                  "type":"variable",
                  "visible":true,
@@ -5743,6 +5749,12 @@
                  "id":12,
                  "name":"quest_3_2",
                  "point":true,
+                 "properties":[
+                        {
+                         "name":"persist",
+                         "type":"bool",
+                         "value":true
+                        }],
                  "rotation":0,
                  "type":"variable",
                  "visible":true,
@@ -5755,6 +5767,12 @@
                  "id":13,
                  "name":"quest_3_3",
                  "point":true,
+                 "properties":[
+                        {
+                         "name":"persist",
+                         "type":"bool",
+                         "value":true
+                        }],
                  "rotation":0,
                  "type":"variable",
                  "visible":true,
@@ -5820,6 +5838,24 @@
                  "width":60.3333333333335,
                  "x":1441.66666666667,
                  "y":1000.33333333333
+                }, 
+                {
+                 "height":0,
+                 "id":16,
+                 "name":"quest_3_counter",
+                 "point":true,
+                 "properties":[
+                        {
+                         "name":"persist",
+                         "type":"bool",
+                         "value":true
+                        }],
+                 "rotation":0,
+                 "type":"variable",
+                 "visible":true,
+                 "width":0,
+                 "x":2182.66666666667,
+                 "y":1517.33333333333
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -6161,7 +6197,7 @@
          "y":0
         }],
  "nextlayerid":74,
- "nextobjectid":16,
+ "nextobjectid":17,
  "orientation":"orthogonal",
  "properties":[
         {
@@ -6175,7 +6211,7 @@
          "value":"..\/dist\/securityVulnerabilities\/src\/level3.js"
         }],
  "renderorder":"right-down",
- "tiledversion":"1.8.4",
+ "tiledversion":"1.8.5",
  "tileheight":32,
  "tilesets":[
         {

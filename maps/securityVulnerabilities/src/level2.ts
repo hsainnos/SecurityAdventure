@@ -2,6 +2,16 @@ import {elevator} from "../../shared/elevator/elevator.js"
 import {TextFilesGerman} from "../../shared/TextFiles/TextFilesGerman.js";
 import {TextFilesEnglish} from "../../shared/TextFiles/TextFilesEnglish.js";
 
+WA.onInit().then(() => {
+    questMatch()
+    WA.state.onVariableChange('quest_2_2').subscribe(() => {
+        questMatch('quest_2_2')
+    })
+    WA.state.onVariableChange('quest_2_3').subscribe(() => {
+        questMatch('quest_2_3')
+    })
+})
+
 let TextFiles: any = TextFilesGerman;
 
 WA.room.hideLayer("USB_Highlight");
@@ -79,7 +89,7 @@ WA.room.onEnterLayer("USB_Quest_Right_Zone").subscribe(() => {
                 //     "USB_quest_right",
                 //     TextFiles.f2_usb_quest_right
                 // );
-                currentItem = WA.ui.openPopup("USB_quest_right", TextFiles.f2_usb_quest_right, [])
+                WA.state.saveVariable('gave_to_boss', true).catch(e => console.error('something wrong'))
                 questMatch("quest_2_1");
                 // TODO: not possible with this engine version
                 // WA.ui.setCharacterSprite("remove", "accessory_usb", "accessory")
@@ -102,7 +112,7 @@ WA.room.onEnterLayer("USB_Quest_Wrong_Zone").subscribe(() => {
                 // TODO: not possible with this engine version
                 // currentItem = WA.ui.openPopup("USB_quest_wrong", "", [], "virus");
                 /*currentItem = WA.ui.openPopup("USB_quest_wrong", "virus", [])*/
-
+                WA.state.saveVariable('inserted_into_pc', true).catch(e => console.error('something wrong'))
                 pickedUp = false;
                 WA.room.showLayer("USB");
                 // TODO: not possible with this engine version
@@ -117,7 +127,7 @@ WA.room.onLeaveLayer("USB_Quest_Wrong_Zone").subscribe(() => {
     closeTriggerMessage();
 });
 
-function questMatch(quest: string) {
+function questMatch(quest: string = "") {
     switch (quest) {
         case "quest_2_1":
             WA.state.saveVariable("quest_2_1", true).catch((e) => console.error(e));
@@ -127,6 +137,8 @@ function questMatch(quest: string) {
             break;
         case "quest_2_3":
             WA.state.saveVariable("quest_2_3", true).catch((e) => console.error(e));
+            break;
+        default:
             break;
     }
     if (

@@ -106,6 +106,7 @@ function show_third() {
 }
 
 function show_fourth() {
+    WA.state.saveVariable('quest_2_2', true).catch(e => console.error(e))
     document.body.innerHTML =
         '<div class="telefon_container">' +
         '<div id="fourth_question" class="imessage">\n' +

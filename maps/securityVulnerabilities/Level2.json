@@ -5201,7 +5201,7 @@
                  "y":1075.66666666666
                 }, 
                 {
-                 "height":70,
+                 "height":332.666666666667,
                  "id":11,
                  "name":"USB_quest_right",
                  "properties":[
@@ -5213,14 +5213,14 @@
                         {
                          "name":"url",
                          "type":"string",
-                         "value":".\/html\/speechBubbles_floor_2\/"
+                         "value":".\/html\/speechBubbles_floor_2\/bubble_2_correct.html"
                         }],
                  "rotation":0,
                  "type":"website",
                  "visible":true,
-                 "width":126.666666666667,
-                 "x":245,
-                 "y":147.333333333333
+                 "width":456.666666666667,
+                 "x":215,
+                 "y":61.333333333333
                 }, 
                 {
                  "height":456.166666666667,
@@ -5241,8 +5241,8 @@
                  "type":"website",
                  "visible":true,
                  "width":674.166666666667,
-                 "x":1079.66666666667,
-                 "y":329.833333333333
+                 "x":1058.33333333334,
+                 "y":430.5
                 }, 
                 {
                  "height":0,
@@ -5297,6 +5297,12 @@
                  "id":14,
                  "name":"quest_2_1",
                  "point":true,
+                 "properties":[
+                        {
+                         "name":"persist",
+                         "type":"bool",
+                         "value":true
+                        }],
                  "rotation":0,
                  "type":"variable",
                  "visible":true,
@@ -5309,6 +5315,12 @@
                  "id":15,
                  "name":"quest_2_2",
                  "point":true,
+                 "properties":[
+                        {
+                         "name":"persist",
+                         "type":"bool",
+                         "value":true
+                        }],
                  "rotation":0,
                  "type":"variable",
                  "visible":true,
@@ -5365,6 +5377,12 @@
                  "id":19,
                  "name":"quest_2_3",
                  "point":true,
+                 "properties":[
+                        {
+                         "name":"persist",
+                         "type":"bool",
+                         "value":true
+                        }],
                  "rotation":0,
                  "type":"variable",
                  "visible":true,
@@ -5382,6 +5400,42 @@
                  "width":66,
                  "x":767,
                  "y":364.5
+                }, 
+                {
+                 "height":0,
+                 "id":21,
+                 "name":"inserted_into_pc",
+                 "point":true,
+                 "properties":[
+                        {
+                         "name":"persist",
+                         "type":"bool",
+                         "value":false
+                        }],
+                 "rotation":0,
+                 "type":"variable",
+                 "visible":true,
+                 "width":0,
+                 "x":1328,
+                 "y":1604
+                }, 
+                {
+                 "height":0,
+                 "id":22,
+                 "name":"gave_to_boss",
+                 "point":true,
+                 "properties":[
+                        {
+                         "name":"persist",
+                         "type":"bool",
+                         "value":false
+                        }],
+                 "rotation":0,
+                 "type":"variable",
+                 "visible":true,
+                 "width":0,
+                 "x":1448,
+                 "y":1602.66666666667
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -6072,7 +6126,7 @@
          "y":0
         }],
  "nextlayerid":153,
- "nextobjectid":21,
+ "nextobjectid":23,
  "orientation":"orthogonal",
  "properties":[
         {

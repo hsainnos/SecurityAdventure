@@ -2,19 +2,19 @@ let answer_option1_2: HTMLParagraphElement = document.getElementById("first_answ
 let answer_option2_2: HTMLParagraphElement = document.getElementById("first_answer_option2") as HTMLParagraphElement;
 
 answer_option1_2.onmouseover = function () {
-    answer_option1.style.textDecoration = "underline"
+    answer_option1_2.style.textDecoration = "underline"
 }
 
 answer_option2_2.onmouseover = function () {
-    answer_option2.style.textDecoration = "underline"
+    answer_option2_2.style.textDecoration = "underline"
 }
 
 answer_option1_2.onmouseout = function () {
-    answer_option1.style.textDecoration = "none"
+    answer_option1_2.style.textDecoration = "none"
 }
 
 answer_option2_2.onmouseout = function () {
-    answer_option2.style.textDecoration = "none"
+    answer_option2_2.style.textDecoration = "none"
 }
 
 answer_option1_2.onclick = show_right
@@ -40,19 +40,19 @@ function show_second_2() {
     answer_option2_2 = document.getElementById("second_answer_option2") as HTMLParagraphElement;
 
     answer_option1_2.onmouseover = function () {
-        answer_option1.style.textDecoration = "underline"
+        answer_option1_2.style.textDecoration = "underline"
     }
 
     answer_option2_2.onmouseover = function () {
-        answer_option2.style.textDecoration = "underline"
+        answer_option2_2.style.textDecoration = "underline"
     }
 
     answer_option1_2.onmouseout = function () {
-        answer_option1.style.textDecoration = "none"
+        answer_option1_2.style.textDecoration = "none"
     }
 
     answer_option2_2.onmouseout = function () {
-        answer_option2.style.textDecoration = "none"
+        answer_option2_2.style.textDecoration = "none"
     }
 
     answer_option1_2.onclick = show_right
@@ -81,19 +81,19 @@ function show_third_2() {
     answer_option2_2 = document.getElementById("third_answer_option2") as HTMLParagraphElement;
 
     answer_option1_2.onmouseover = function () {
-        answer_option1.style.textDecoration = "underline"
+        answer_option1_2.style.textDecoration = "underline"
     }
 
     answer_option2_2.onmouseover = function () {
-        answer_option2.style.textDecoration = "underline"
+        answer_option2_2.style.textDecoration = "underline"
     }
 
     answer_option1_2.onmouseout = function () {
-        answer_option1.style.textDecoration = "none"
+        answer_option1_2.style.textDecoration = "none"
     }
 
     answer_option2_2.onmouseout = function () {
-        answer_option2.style.textDecoration = "none"
+        answer_option2_2.style.textDecoration = "none"
     }
 
     answer_option1_2.onclick = show_right
@@ -102,6 +102,7 @@ function show_third_2() {
 }
 
 function show_right() {
+    WA.state.saveVariable('quest_2_3', true).catch(e => console.error(e))
     document.body.innerHTML =
         '<div class="telefon_container">' +
         '<br>' +

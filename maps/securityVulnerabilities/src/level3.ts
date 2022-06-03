@@ -2,6 +2,21 @@ import {elevator} from "../../shared/elevator/elevator.js"
 import {TextFilesGerman} from "../../shared/TextFiles/TextFilesGerman.js";
 import {TextFilesEnglish} from "../../shared/TextFiles/TextFilesEnglish.js";
 
+WA.onInit().then(() => {
+    questMatch();
+    WA.state.onVariableChange('quest_3_1').subscribe(() => {
+        questMatch('quest_3_1')
+    })
+    WA.state.onVariableChange('quest_3_2').subscribe(() => {
+        questMatch('quest_3_2')
+    })
+    WA.state.onVariableChange('quest_3_3').subscribe(() => {
+        questMatch('quest_3_3')
+    })
+})
+
+WA.state.saveVariable('quest_3_counter', 0).catch(e => console.error(e))
+
 let TextFiles: any = TextFilesGerman;
 
 let currentItem: any = undefined;
@@ -166,7 +181,7 @@ WA.room.onEnterLayer("quest_3_3_zone").subscribe(() => {
 
 WA.room.onLeaveLayer("quest_3_3_zone").subscribe(() => closeItem());
 
-function questMatch(quest: string) {
+function questMatch(quest: string = "") {
     switch (quest) {
         case "quest_3_1":
             mail_1_quest_done = true;
@@ -179,6 +194,8 @@ function questMatch(quest: string) {
         case "quest_3_3":
             mail_3_quest_done = true;
             WA.state.saveVariable("quest_3_3", true).catch((e) => console.error(e));
+            break;
+        default:
             break;
     }
     if (
