@@ -40,7 +40,7 @@ export class InfoText implements HtmlObject{
         legend2.text(this.overHeaderText)
 
         let element = $("<p></p>");
-        element.addClass("text-break");
+        element.addClass("text-break").addClass("text-center");
         element.attr("id", this.id);
         element.text(this.text);
 

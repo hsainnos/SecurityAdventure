@@ -5,5 +5,9 @@ WA.onInit().then(() => {
         WA.nav.goToRoom("../secureCoding/secure_coding_map.json")
     })
 
+    const elevatorSubscription1= WA.room.onEnterLayer("zones/zone1").subscribe(() => {
+        WA.nav.goToRoom("../code_analysis/code_analysis.json")
+    })
+
 
 })
