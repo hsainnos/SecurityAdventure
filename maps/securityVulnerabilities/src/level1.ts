@@ -10,8 +10,35 @@ let quest_1: boolean = false;
 let quest_2: boolean = false;
 let quest_3: boolean = false;
 
+elevator.setCurrentLevel("Level1.json");
+elevator.setMaxLevelAvailable(2);
+
 WA.room.hideLayer("Paper_Highlight");
 WA.room.hideLayer("Kylo_Highlight");
+
+WA.ui.openPopup("popUp_elevator", elevator.getCurrentLevel().toString(), []);
+
+WA.room.onEnterLayer("interact_down").subscribe(() => {
+    currentTriggerMessage = WA.ui.displayActionMessage({
+        message: TextFiles.elevator_interact_message,
+        callback: () => {
+            WA.room.setProperty("exit", "exitUrl", elevator.setLevelDown());
+            WA.ui.openPopup("popUp_elevator", elevator.getCurrentLevel().toString(), []);
+        },
+    });
+});
+
+WA.room.onLeaveLayer("interact_down").subscribe(() => closeTriggerMessage());
+
+WA.room.onEnterLayer("interact_up").subscribe(() => {
+    currentTriggerMessage = WA.ui.displayActionMessage({
+        message: TextFiles.elevator_interact_message,
+        callback: () => {
+            WA.room.setProperty("exit", "exitUrl", elevator.setLevelUp());
+            WA.ui.openPopup("popUp_elevator", elevator.getCurrentLevel().toString(), []);
+        },
+    });
+});
 
 WA.room.onEnterLayer("Kylo_Popup").subscribe(() => {
     WA.state.saveVariable('quest_1_3_visible', true)
@@ -49,10 +76,6 @@ WA.room.onLeaveLayer("F1_Notebook").subscribe(() => {
     closeTriggerMessage()
 });
 
-
-
-elevator.setCurrentLevel("Level1.json");
-elevator.setMaxLevelAvailable(2);
 
 function closeTriggerMessage() {
     if (currentTriggerMessage !== undefined) {

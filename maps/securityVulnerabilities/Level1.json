@@ -661,7 +661,7 @@
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
          "height":50,
          "id":126,
-         "name":"Interact_Fernbedieunung_Down",
+         "name":"interact_down",
          "opacity":0,
          "properties":[
                 {
@@ -728,7 +728,7 @@
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
          "height":50,
          "id":125,
-         "name":"Interact_Fernbedienung_Up",
+         "name":"interact_up",
          "opacity":0,
          "properties":[
                 {
