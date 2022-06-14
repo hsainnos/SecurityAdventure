@@ -45,6 +45,7 @@ function execute() {
     let value: string = input2.value
     if (value === right_password.innerText) {
 
+        WA.state.saveVariable('quest_1_2', true).catch(e => console.error(e))
 
         document.body.innerHTML = '<div class="success-desktop-background">\n' +
             '                       <div class="success-symbol-layer">\n' +

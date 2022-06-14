@@ -33,6 +33,21 @@ success.addEventListener('click', () => {
 })
 
 error.addEventListener('click', () => {
+    let i: number = <number>WA.state.loadVariable('quest_3_counter')
+    switch (i) {
+        case 0:
+            WA.state.saveVariable('quest_3_1', true).catch(e => console.error(e))
+            WA.state.saveVariable('quest_3_counter', i + 1).catch(e => console.error(e))
+            break;
+        case 1:
+            WA.state.saveVariable('quest_3_2', true).catch(e => console.error(e))
+            WA.state.saveVariable('quest_3_counter', i + 1).catch(e => console.error(e))
+            break;
+        case 2:
+            WA.state.saveVariable('quest_3_3', true).catch(e => console.error(e))
+            break;
+    }
+
     document.body.innerHTML = '<div class="error-desktop-background">\n' +
         '        <div class="error-symbol-layer">\n' +
         '            <div class="error-time"></div>\n' +

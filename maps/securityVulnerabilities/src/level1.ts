@@ -10,6 +10,19 @@ let quest_1: boolean = false;
 let quest_2: boolean = false;
 let quest_3: boolean = false;
 
+WA.onInit().then(() => {
+    questMatch()
+    WA.state.onVariableChange('quest_1_1').subscribe(() => {
+        questMatch('quest_1_1')
+    })
+    WA.state.onVariableChange('quest_1_2').subscribe(() => {
+        questMatch('quest_1_2')
+    })
+    WA.state.onVariableChange('quest_1_3').subscribe(() => {
+        questMatch('quest_1_3')
+    })
+})
+
 elevator.setCurrentLevel("Level1.json");
 elevator.setMaxLevelAvailable(2);
 
@@ -76,6 +89,30 @@ WA.room.onLeaveLayer("F1_Notebook").subscribe(() => {
     closeTriggerMessage()
 });
 
+function questMatch(quest: string = "") {
+    switch (quest) {
+        case "quest_1_1":
+            WA.state.saveVariable("quest_1_1", true).catch((e) => console.error(e));
+            break;
+        case "quest_1_2":
+            WA.state.saveVariable("quest_1_2", true).catch((e) => console.error(e));
+            break;
+        case "quest_1_3":
+            WA.state.saveVariable("quest_1_3", true).catch((e) => console.error(e));
+            break;
+        default:
+            break;
+    }
+    if (
+        WA.state.loadVariable("quest_1_1") &&
+        WA.state.loadVariable("quest_1_2") &&
+        WA.state.loadVariable("quest_1_3")
+    ) {
+        if ((elevator.getHighestLevel() + 1) === (elevator.getCurrentLevel() + 1)) {
+            elevator.increaseMaxLevelAvailable();
+        }
+    }
+}
 
 function closeTriggerMessage() {
     if (currentTriggerMessage !== undefined) {
