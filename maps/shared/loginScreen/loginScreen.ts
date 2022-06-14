@@ -1,29 +1,17 @@
-const password = document.getElementById('link') as HTMLElement
-const input = document.getElementById('password') as HTMLInputElement
-const login = document.getElementById('login') as HTMLElement
+let password = document.getElementById('link') as HTMLElement
+let input = document.getElementById('password') as HTMLInputElement
+let login = document.getElementById('login') as HTMLElement
 
-const button_container = document.getElementById('button-container') as HTMLElement
+let button_container = document.getElementById('button-container') as HTMLElement
 
-const button1 = document.getElementById('button_1') as HTMLButtonElement
-const button2 = document.getElementById('button_2') as HTMLButtonElement
-const button3 = document.getElementById('button_3') as HTMLButtonElement
+let button1 = document.getElementById('button_1') as HTMLButtonElement
+let button2 = document.getElementById('button_2') as HTMLButtonElement
+let button3 = document.getElementById('button_3') as HTMLButtonElement
 
 
 WA.state.onVariableChange('quest_1_1_visible').subscribe(() => {
     login.hidden = false
     button_container.hidden = false
-})
-
-WA.state.onVariableChange('quest_1_2_visible').subscribe(() => {
-    login.hidden = false
-    button_container.hidden = false
-
-})
-
-WA.state.onVariableChange('quest_1_3_visible').subscribe(() => {
-    login.hidden = false
-    button_container.hidden = false
-
 })
 
 button2.addEventListener('click', function () {
@@ -49,6 +37,7 @@ input.addEventListener('keydown', function (key) {
     }
 })
 
+// @ts-ignore
 function execute() {
 
     let right_password = document.getElementById('right-password') as HTMLElement

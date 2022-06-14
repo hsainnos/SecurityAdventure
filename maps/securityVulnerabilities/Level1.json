@@ -6127,7 +6127,7 @@
                  "y":758
                 }, 
                 {
-                 "height":419,
+                 "height":449,
                  "id":13,
                  "name":"popUp_1_quest_1",
                  "properties":[
@@ -6144,12 +6144,12 @@
                  "rotation":0,
                  "type":"website",
                  "visible":true,
-                 "width":572,
-                 "x":417.333333333334,
-                 "y":861.333333333333
+                 "width":689,
+                 "x":319.333333333334,
+                 "y":753.333333333333
                 }, 
                 {
-                 "height":443,
+                 "height":414,
                  "id":14,
                  "name":"popUp_1_quest_2",
                  "properties":[
@@ -6166,12 +6166,12 @@
                  "rotation":0,
                  "type":"website",
                  "visible":true,
-                 "width":572,
-                 "x":388.666666666666,
-                 "y":1155.66666666666
+                 "width":690,
+                 "x":318.666666666666,
+                 "y":1140.66666666666
                 }, 
                 {
-                 "height":439,
+                 "height":538,
                  "id":15,
                  "name":"popUp_1_quest_3",
                  "properties":[
@@ -6188,9 +6188,9 @@
                  "rotation":0,
                  "type":"website",
                  "visible":true,
-                 "width":573,
-                 "x":880.333333333331,
-                 "y":1172.66666666667
+                 "width":774,
+                 "x":841.333333333331,
+                 "y":1105.66666666667
                 }, 
                 {
                  "height":0,
@@ -6229,7 +6229,7 @@
                  "y":1398.5
                 }, 
                 {
-                 "height":255.333333333333,
+                 "height":148.333333333333,
                  "id":19,
                  "name":"paper",
                  "properties":[
@@ -6246,12 +6246,12 @@
                  "rotation":0,
                  "type":"website",
                  "visible":true,
-                 "width":382,
-                 "x":620,
-                 "y":825
+                 "width":268,
+                 "x":653,
+                 "y":824
                 }, 
                 {
-                 "height":262.666666666667,
+                 "height":137.666666666667,
                  "id":21,
                  "name":"Kylo",
                  "properties":[
@@ -6268,9 +6268,9 @@
                  "rotation":0,
                  "type":"website",
                  "visible":true,
-                 "width":389,
-                 "x":1185,
-                 "y":1298.33333333333
+                 "width":196,
+                 "x":1270,
+                 "y":1365.33333333333
                 }, 
                 {
                  "height":0,
