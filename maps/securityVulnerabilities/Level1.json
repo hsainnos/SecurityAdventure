@@ -4637,17 +4637,6 @@
          "id":109,
          "name":"Pool",
          "opacity":0,
-         "properties":[
-                {
-                 "name":"openWebsite",
-                 "type":"string",
-                 "value":"https:\/\/games.cdn.famobi.com\/html5games\/0\/8-ball-billiards-classic\/v240\/?fg_domain=play.famobi.com&fg_aid=A1000-1&fg_uid=82038e98-d4e1-46dd-8de9-1460d1395eab&fg_pid=4638e320-4444-4514-81c4-d80a8c662371&fg_beat=836&original_ref=https%3A%2F%2Fde.html5games.com%2FSpiel%2F8-Ball-Billiards-Classic%2F82038e98-d4e1-46dd-8de9-1460d1395eab"
-                }, 
-                {
-                 "name":"openWebsiteTrigger",
-                 "type":"string",
-                 "value":"onaction"
-                }],
          "type":"tilelayer",
          "visible":true,
          "width":50,
@@ -4709,17 +4698,6 @@
          "id":110,
          "name":"Tischtennis",
          "opacity":0,
-         "properties":[
-                {
-                 "name":"openWebsite",
-                 "type":"string",
-                 "value":"https:\/\/play.famobi.com\/table-tennis-world-tour"
-                }, 
-                {
-                 "name":"openWebsiteTrigger",
-                 "type":"string",
-                 "value":"onaction"
-                }],
          "type":"tilelayer",
          "visible":true,
          "width":50,
@@ -4781,17 +4759,6 @@
          "id":111,
          "name":"Tetris",
          "opacity":0,
-         "properties":[
-                {
-                 "name":"openWebsite",
-                 "type":"string",
-                 "value":"https:\/\/play.famobi.com\/element-blocks"
-                }, 
-                {
-                 "name":"openWebsiteTrigger",
-                 "type":"string",
-                 "value":"onaction"
-                }],
          "type":"tilelayer",
          "visible":true,
          "width":50,
@@ -4853,17 +4820,6 @@
          "id":112,
          "name":"Automat",
          "opacity":0,
-         "properties":[
-                {
-                 "name":"openWebsite",
-                 "type":"string",
-                 "value":"https:\/\/play.famobi.com\/bubble-woods"
-                }, 
-                {
-                 "name":"openWebsiteTrigger",
-                 "type":"string",
-                 "value":"onaction"
-                }],
          "type":"tilelayer",
          "visible":true,
          "width":50,
