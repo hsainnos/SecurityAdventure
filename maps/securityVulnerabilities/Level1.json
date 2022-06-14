@@ -4570,12 +4570,6 @@
          "id":105,
          "name":"Feature l",
          "opacity":0,
-         "properties":[
-                {
-                 "name":"openWebsite",
-                 "type":"string",
-                 "value":"https:\/\/website.be-aware.informatik.hs-augsburg.de\/S1_Rezeption_Links.html"
-                }],
          "type":"tilelayer",
          "visible":true,
          "width":50,
@@ -6071,7 +6065,7 @@
                  "visible":true,
                  "width":63.3333333333333,
                  "x":1248.5,
-                 "y":679.666666666667
+                 "y":647.666666666667
                 }, 
                 {
                  "height":284,
@@ -6337,7 +6331,7 @@
                  "y":1426.5
                 }, 
                 {
-                 "height":93,
+                 "height":166.333333333333,
                  "id":29,
                  "name":"Password",
                  "properties":[
@@ -6354,9 +6348,9 @@
                  "rotation":0,
                  "type":"website",
                  "visible":true,
-                 "width":168,
-                 "x":765,
-                 "y":662
+                 "width":290,
+                 "x":745.666666666667,
+                 "y":620.666666666667
                 }],
          "opacity":1,
          "type":"objectgroup",
