@@ -150,7 +150,7 @@ export class Room {
 
     /**
      * Instance name is:
-     * - In a public URL: the second part of the URL ( _/[instance]/map.json)
+     * - In a public URL: the second part of the URL ( _/[instance]/floor0.json)
      * - In a private URL: [organizationId/worldId]
      *
      * @deprecated
