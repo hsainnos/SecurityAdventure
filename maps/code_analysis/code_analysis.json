@@ -35,6 +35,17 @@
                  "id":34,
                  "name":"Progress",
                  "opacity":1,
+                 "properties":[
+                        {
+                         "name":"openWebsite",
+                         "type":"string",
+                         "value":".\/html\/progressText.html"
+                        }, 
+                        {
+                         "name":"openWebsiteAllowApi",
+                         "type":"bool",
+                         "value":true
+                        }],
                  "type":"tilelayer",
                  "visible":true,
                  "width":30,
@@ -143,6 +154,17 @@
                  "id":28,
                  "name":"C_4",
                  "opacity":1,
+                 "properties":[
+                        {
+                         "name":"openWebsite",
+                         "type":"string",
+                         "value":".\/html\/problems\/cVariable.html"
+                        }, 
+                        {
+                         "name":"openWebsiteAllowApi",
+                         "type":"bool",
+                         "value":true
+                        }],
                  "type":"tilelayer",
                  "visible":true,
                  "width":30,
@@ -179,6 +201,17 @@
                  "id":29,
                  "name":"C_3",
                  "opacity":1,
+                 "properties":[
+                        {
+                         "name":"openWebsite",
+                         "type":"string",
+                         "value":".\/html\/problems\/cScanf.html"
+                        }, 
+                        {
+                         "name":"openWebsiteAllowApi",
+                         "type":"bool",
+                         "value":true
+                        }],
                  "type":"tilelayer",
                  "visible":true,
                  "width":30,
@@ -215,6 +248,17 @@
                  "id":30,
                  "name":"C_2",
                  "opacity":1,
+                 "properties":[
+                        {
+                         "name":"openWebsite",
+                         "type":"string",
+                         "value":".\/html\/problems\/cPrintf.html"
+                        }, 
+                        {
+                         "name":"openWebsiteAllowApi",
+                         "type":"bool",
+                         "value":true
+                        }],
                  "type":"tilelayer",
                  "visible":true,
                  "width":30,
@@ -255,7 +299,7 @@
                         {
                          "name":"openWebsite",
                          "type":"string",
-                         "value":".\/html\/problems\/pointerC.html"
+                         "value":".\/html\/problems\/cPointer.html"
                         }, 
                         {
                          "name":"openWebsiteAllowApi",
@@ -298,6 +342,17 @@
                  "id":27,
                  "name":"Python_4",
                  "opacity":1,
+                 "properties":[
+                        {
+                         "name":"openWebsite",
+                         "type":"string",
+                         "value":".\/html\/problems\/pythonTemp.html"
+                        }, 
+                        {
+                         "name":"openWebsiteAllowApi",
+                         "type":"bool",
+                         "value":true
+                        }],
                  "type":"tilelayer",
                  "visible":true,
                  "width":30,
@@ -334,6 +389,17 @@
                  "id":26,
                  "name":"Python_3",
                  "opacity":1,
+                 "properties":[
+                        {
+                         "name":"openWebsite",
+                         "type":"string",
+                         "value":".\/html\/problems\/pythonExec.html"
+                        }, 
+                        {
+                         "name":"openWebsiteAllowApi",
+                         "type":"bool",
+                         "value":true
+                        }],
                  "type":"tilelayer",
                  "visible":true,
                  "width":30,
@@ -370,6 +436,17 @@
                  "id":24,
                  "name":"Python_2",
                  "opacity":1,
+                 "properties":[
+                        {
+                         "name":"openWebsite",
+                         "type":"string",
+                         "value":".\/html\/problems\/pythonDirectory.html"
+                        }, 
+                        {
+                         "name":"openWebsiteAllowApi",
+                         "type":"bool",
+                         "value":true
+                        }],
                  "type":"tilelayer",
                  "visible":true,
                  "width":30,
@@ -406,6 +483,17 @@
                  "id":25,
                  "name":"Python_1",
                  "opacity":1,
+                 "properties":[
+                        {
+                         "name":"openWebsite",
+                         "type":"string",
+                         "value":".\/html\/problems\/pythonAssert.html"
+                        }, 
+                        {
+                         "name":"openWebsiteAllowApi",
+                         "type":"bool",
+                         "value":true
+                        }],
                  "type":"tilelayer",
                  "visible":true,
                  "width":30,
@@ -1132,9 +1220,164 @@
          "visible":true,
          "x":0,
          "y":0
+        }, 
+        {
+         "draworder":"topdown",
+         "id":38,
+         "name":"floorLayer",
+         "objects":[
+                {
+                 "height":0,
+                 "id":1,
+                 "name":"problem2_8",
+                 "point":true,
+                 "properties":[
+                        {
+                         "name":"persist",
+                         "type":"bool",
+                         "value":true
+                        }],
+                 "rotation":0,
+                 "type":"variable",
+                 "visible":true,
+                 "width":0,
+                 "x":231.173630565655,
+                 "y":1037.99248971807
+                }, 
+                {
+                 "height":0,
+                 "id":2,
+                 "name":"problem2_7",
+                 "point":true,
+                 "properties":[
+                        {
+                         "name":"persist",
+                         "type":"bool",
+                         "value":true
+                        }],
+                 "rotation":0,
+                 "type":"variable",
+                 "visible":true,
+                 "width":0,
+                 "x":341.038326280026,
+                 "y":1056.30327233713
+                }, 
+                {
+                 "height":0,
+                 "id":4,
+                 "name":"problem2_6",
+                 "point":true,
+                 "properties":[
+                        {
+                         "name":"persist",
+                         "type":"bool",
+                         "value":true
+                        }],
+                 "rotation":0,
+                 "type":"variable",
+                 "visible":true,
+                 "width":0,
+                 "x":274.661739285927,
+                 "y":1200.50068546224
+                }, 
+                {
+                 "height":0,
+                 "id":5,
+                 "name":"problem2_5",
+                 "point":true,
+                 "properties":[
+                        {
+                         "name":"persist",
+                         "type":"bool",
+                         "value":true
+                        }],
+                 "rotation":0,
+                 "type":"variable",
+                 "visible":true,
+                 "width":0,
+                 "x":469.213804613459,
+                 "y":1163.87912022412
+                }, 
+                {
+                 "height":0,
+                 "id":6,
+                 "name":"problem2_4",
+                 "point":true,
+                 "properties":[
+                        {
+                         "name":"persist",
+                         "type":"bool",
+                         "value":true
+                        }],
+                 "rotation":0,
+                 "type":"variable",
+                 "visible":true,
+                 "width":0,
+                 "x":514.990761161113,
+                 "y":1039.13691363176
+                }, 
+                {
+                 "height":0,
+                 "id":7,
+                 "name":"problem2_3",
+                 "point":true,
+                 "properties":[
+                        {
+                         "name":"persist",
+                         "type":"bool",
+                         "value":true
+                        }],
+                 "rotation":0,
+                 "type":"variable",
+                 "visible":true,
+                 "width":0,
+                 "x":408.559337187817,
+                 "y":912.105859212017
+                }, 
+                {
+                 "height":0,
+                 "id":8,
+                 "name":"problem2_2",
+                 "point":true,
+                 "properties":[
+                        {
+                         "name":"persist",
+                         "type":"bool",
+                         "value":true
+                        }],
+                 "rotation":0,
+                 "type":"variable",
+                 "visible":true,
+                 "width":0,
+                 "x":254.062108839483,
+                 "y":893.795076592955
+                }, 
+                {
+                 "height":0,
+                 "id":9,
+                 "name":"problem2_1",
+                 "point":true,
+                 "properties":[
+                        {
+                         "name":"persist",
+                         "type":"bool",
+                         "value":true
+                        }],
+                 "rotation":0,
+                 "type":"variable",
+                 "visible":true,
+                 "width":0,
+                 "x":146.486260952494,
+                 "y":910.961435298325
+                }],
+         "opacity":1,
+         "type":"objectgroup",
+         "visible":true,
+         "x":0,
+         "y":0
         }],
- "nextlayerid":38,
- "nextobjectid":1,
+ "nextlayerid":39,
+ "nextobjectid":10,
  "orientation":"orthogonal",
  "properties":[
         {

@@ -31,7 +31,12 @@ $(function() {
         "    }\n" +
         "}\n", "java")
 
-    review1.addButton(tab1,"Good!", () => {alert("Die Antwort ist leider falsch!")})
+    review1.addButton(tab1,"Good!", () => {
+        codeContainer.empty()
+        codeContainer.append(review1.getHtml())
+        codeContainer.append(new InfoText("Wrong answer sorry!",  "Wrong",true).getHtml().html())
+        $("html, body").animate({ scrollTop: $(document).height() }, "fast")
+    })
     review1.addButton(tab1,"Bad!", () => {
         codeContainer.empty()
         codeContainer.append(review1.getHtml())
@@ -79,7 +84,14 @@ $(function() {
         "    }\n" +
         "}\n", "java")
 
-    review2.addButton(rev2Tab1, "Good", () => {alert("FALSCH!")})
+    review2.addButton(rev2Tab1, "Good", () => {
+        codeContainer.empty()
+        review2.tabContainer.makeTabActive(rev2Tab1);
+        codeContainer.append(review1.getHtml())
+        codeContainer.append(review2.getHtml())
+        codeContainer.append(new InfoText("Wrong answer sorry!",  "Wrong",true).getHtml().html())
+        $("html, body").animate({ scrollTop: $(document).height() }, "fast")
+    })
 
 
 
@@ -110,7 +122,14 @@ $(function() {
         "        out.flush();\n" +
         "    }\n" +
         "}\n","java")
-    review2.addButton(rev2Tab2, "Good", () => {alert("FALSCH!")})
+    review2.addButton(rev2Tab2, "Good", () => {
+        codeContainer.empty()
+        review2.tabContainer.makeTabActive(rev2Tab2);
+        codeContainer.append(review1.getHtml())
+        codeContainer.append(review2.getHtml())
+        codeContainer.append(new InfoText("Wrong answer sorry!",  "Wrong",true).getHtml().html())
+        $("html, body").animate({ scrollTop: $(document).height() }, "fast")
+    })
 
 
 
@@ -149,8 +168,8 @@ $(function() {
         codeContainer.append(review1.getHtml())
         codeContainer.append(review2.getHtml())
         WA.state.saveVariable(LEVEL_CONSTANTS.LEVEL_1.javaSocketProblem.variableName, true)
-        codeContainer.append(new InfoText("RichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtig", "Explanation",true).getHtml().html())
-
+        codeContainer.append(new InfoText("RichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtig", "Explanation",true,"AWESOME!").getHtml().html())
+        $("html, body").animate({ scrollTop: $(document).height() }, "fast")
     })
 //codeReviewApi.addReviewObjectsToHtmlElement(phase1Element, codeArray)
 })

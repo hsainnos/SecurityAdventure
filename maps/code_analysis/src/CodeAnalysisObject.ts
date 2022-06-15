@@ -4,6 +4,7 @@ import {getUniqueID} from "../../shared/htmlObjects/HtmlObjectHelper.js";
 import {InfoText} from "../../shared/htmlObjects/InfoText.js";
 import {Console} from "../../shared/htmlObjects/Console.js";
 import {Button} from "../../shared/htmlObjects/Button.js";
+import {LEVEL_CONSTANTS} from "../../shared/global/LevelConstants";
 
 export class CodeAnalysisObject implements HtmlObject {
 
@@ -15,7 +16,7 @@ export class CodeAnalysisObject implements HtmlObject {
     buttonArray: Button[] = [];
 
 
-    createProblem(codeContainer: JQuery, language: string, code: string, consoleOutput: string, answers: { answer: string, isRight: boolean, }[], rightText: string) {
+    createProblem(codeContainer: JQuery,variableName: string, language: string, code: string, consoleOutput: string, answers: { answer: string, isRight: boolean, }[], rightText: string) {
 
 
         // this.codeBox = new CodeBox(code,language);
@@ -26,6 +27,8 @@ export class CodeAnalysisObject implements HtmlObject {
         this.rightText = new InfoText(rightText, "Info", true);
         this.console = new Console("abc-command", consoleOutput);
 
+        let wrongText =  new InfoText("Answer is wrong!", "Info", true);
+
         //let consoleDiv = $("<div></div>").addClass("console");
         //let outputDiv = $("<div></div>").addClass("output");
 
@@ -34,10 +37,13 @@ export class CodeAnalysisObject implements HtmlObject {
             let buttonFun = () => {
                 codeContainer.empty();
                 codeContainer.append(this.getHtml());
+                codeContainer.append(wrongText.getHtml().addClass("console-text"));
+                $("html, body").animate({ scrollTop: $(document).height() }, "fast");
             };
 
             if (answer.isRight) {
                 buttonFun = () => {
+                    WA.state.saveVariable(variableName, true)
                     codeContainer.empty();
                     codeContainer.append(this.getHtml());
                     codeContainer.append(this.rightText.getHtml().addClass("console-text"));
@@ -55,8 +61,12 @@ export class CodeAnalysisObject implements HtmlObject {
 
     getHtml(): JQuery {
         let buttonHtml = $("<div></div>")
-        this.buttonArray.forEach((button) => {
+        this.buttonArray.forEach((button, index) => {
             buttonHtml.append(button.getHtml().addClass("m-4"))
+
+            if(index != 0 && (index + 1) % 2 == 0){
+                buttonHtml.append("<br />")
+            }
         });
 
 

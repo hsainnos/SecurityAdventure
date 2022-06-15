@@ -30,9 +30,15 @@ $(function() {
         WA.state.saveVariable(LEVEL_CONSTANTS.LEVEL_1.javaReadFileProblem.variableName, true)
         codeContainer.empty()
         codeContainer.append(review1.getHtml())
-        codeContainer.append(new InfoText("RichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtig", "Explanation",true).getHtml().html())
+        codeContainer.append(new InfoText("RichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtig", "Explanation",true,"AWESOME!").getHtml().html())
+        $("html, body").animate({ scrollTop: $(document).height() }, "fast")
     })
-    review1.addButton(tab1,"Bad!", () => {alert("FALSCH!!")})
+    review1.addButton(tab1,"Bad!", () => {
+        codeContainer.empty()
+        codeContainer.append(review1.getHtml())
+        codeContainer.append(new InfoText("Wrong answer sorry!",  "Wrong",true).getHtml().html())
+        $("html, body").animate({ scrollTop: $(document).height() }, "fast")
+    })
 
 
 

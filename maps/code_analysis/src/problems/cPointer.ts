@@ -1,12 +1,13 @@
 import {CodeAnalysisObject} from "../CodeAnalysisObject.js";
+import {LEVEL_CONSTANTS} from "../../../shared/global/LevelConstants.js";
 
-$(function() {
+$(function () {
 
     let codeContainer = $("#code-container")
 
     let codeAnalysisObject = new CodeAnalysisObject();
 
-    codeAnalysisObject.createProblem(codeContainer,"clike","#include <stdio.h>\n" +
+    codeAnalysisObject.createProblem(codeContainer, LEVEL_CONSTANTS.LEVEL_2.cPointer.variableName, "clike", "#include <stdio.h>\n" +
         "\n" +
         "int main() {\n" +
         "\n" +
@@ -31,7 +32,7 @@ $(function() {
         "    sum2=*ptr1+*ptr2+*ptr3;\n" +
         "\n" +
         "    return 0;\n" +
-        "}\n","pointer.c: (in function main)\n" +
+        "}\n", "pointer.c: (in function main)\n" +
         "pointer.c:23:11: Variable ptr1 used after being released\n" +
         "  Memory is used after it has been released (either by passing as an only param\n" +
         "  or assigning to an only global). (Use -usereleased to inhibit warning)\n" +
@@ -39,7 +40,20 @@ $(function() {
         "pointer.c:23:17: Variable ptr2 used after being released\n" +
         "   pointer.c:21:10: Storage ptr2 released\n" +
         "\n" +
-        "Finished checking --- 2 code warnings\n",[{answer : "eins", isRight: true},{answer : "zwei", isRight: false},{answer : "drei", isRight: false},{answer : "vier", isRight: false}],"Ist halt einfach richtig lol")
+        "Finished checking --- 2 code warnings\n", [{
+        answer: "Malicious code execution",
+        isRight: false
+    }, {answer: "Undefined behaviour", isRight: true}, {
+        answer: "Data stealing",
+        isRight: false
+    }, {answer: "Buffer overflow ", isRight: false}], "Using a pointer after it is dereferenced is dangerous.\n" +
+        "\n" +
+        "free(ptr1);\n" +
+        "free(ptr2);\n" +
+        "sum2=*ptr1+*ptr2+*ptr3;\n" +
+        "\n" +
+        "\n" +
+        "It may lead to undefined behaviour.")
 
 
     codeContainer.append(codeAnalysisObject.getHtml());
