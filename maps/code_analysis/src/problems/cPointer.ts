@@ -3,6 +3,10 @@ import {LEVEL_CONSTANTS} from "../../../shared/global/LevelConstants.js";
 
 $(function () {
 
+
+
+
+
     let codeContainer = $("#code-container")
 
     let codeAnalysisObject = new CodeAnalysisObject();
@@ -46,16 +50,14 @@ $(function () {
     }, {answer: "Undefined behaviour", isRight: true}, {
         answer: "Data stealing",
         isRight: false
-    }, {answer: "Buffer overflow ", isRight: false}], "Using a pointer after it is dereferenced is dangerous.\n" +
-        "\n" +
-        "free(ptr1);\n" +
-        "free(ptr2);\n" +
-        "sum2=*ptr1+*ptr2+*ptr3;\n" +
-        "\n" +
-        "\n" +
+    }, {answer: "Buffer overflow ", isRight: false}], "Using a pointer after it is dereferenced is dangerous.<br\>" +
+        "<br\>" +
+        "free(ptr1);<br\>" +
+        "free(ptr2);<br\>" +
+        "sum2=*ptr1+*ptr2+*ptr3;<br\>" +
+        "<br\>" +
+        "<br\>" +
         "It may lead to undefined behaviour.")
-
-
     codeContainer.append(codeAnalysisObject.getHtml());
 
 })

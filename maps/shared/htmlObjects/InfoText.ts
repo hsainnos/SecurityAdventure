@@ -42,7 +42,7 @@ export class InfoText implements HtmlObject{
         let element = $("<p></p>");
         element.addClass("text-break").addClass("text-center");
         element.attr("id", this.id);
-        element.text(this.text);
+        element.append(this.text);
 
         fieldset.append(legend2);
         fieldset.append(legend);
