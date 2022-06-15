@@ -4,7 +4,7 @@ import {getUniqueID} from "../../shared/htmlObjects/HtmlObjectHelper.js";
 import {InfoText} from "../../shared/htmlObjects/InfoText.js";
 import {Console} from "../../shared/htmlObjects/Console.js";
 import {Button} from "../../shared/htmlObjects/Button.js";
-import {LEVEL_CONSTANTS} from "../../shared/global/LevelConstants";
+import {changeTabKey, keysToMap} from "../../shared/global/config.js";
 
 export class CodeAnalysisObject implements HtmlObject {
 
@@ -14,6 +14,7 @@ export class CodeAnalysisObject implements HtmlObject {
     codeBox: CodeBox;
     rightText: InfoText;
     buttonArray: Button[] = [];
+    activeBindFunctions: ((e: KeyboardEvent) => void)[] = [];
 
 
     createProblem(codeContainer: JQuery,variableName: string, language: string, code: string, consoleOutput: string, answers: { answer: string, isRight: boolean, }[], rightText: string) {
@@ -56,6 +57,8 @@ export class CodeAnalysisObject implements HtmlObject {
         })
 
 
+
+        this.bindButtonsToKeys()
     }
 
 
@@ -72,6 +75,39 @@ export class CodeAnalysisObject implements HtmlObject {
 
         return $("<div></div>").append(this.codeBox.getHtml().addClass("console-text").append($("<hr/>")).append(this.console.getHtml()).append($("<hr/>")).append(buttonHtml));
     }
+
+
+
+
+    bindButtonsToKeys = () => {
+
+        this.activeBindFunctions.forEach((bindFunction) => {
+            document.removeEventListener('keydown', bindFunction);
+        })
+
+
+        const bindFunction = (e: KeyboardEvent) => {
+            e.preventDefault();
+
+                let index = 0
+                this.buttonArray.forEach((button) => {
+                    if(index >= keysToMap.length){
+                        return;
+                    }
+                    else if(e.key == keysToMap[index]){
+                        button.triggerButton();
+                    }
+                    index++;
+                })
+
+
+        };
+
+        document.addEventListener('keydown', bindFunction);
+        this.activeBindFunctions.push(bindFunction)
+
+
+    };
 
 
 }
