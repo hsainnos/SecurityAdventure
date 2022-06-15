@@ -21,11 +21,11 @@ $(function() {
         "  Result returned by function call is not used. If this is intended, can cast\n" +
         "  result to (void) to eliminate message. (Use -retvalint to inhibit warning)\n" +
         "\n" +
-        "Finished checking --- 1 code warning\n",[{answer : "unused variable", isRight: false},{answer : "buffer overflow", isRight: true},{answer : "undefined behaviour", isRight: false},{answer : "everythings fine", isRight: false}],"Scanf() reads input from the keyboard.\n" +
-        "\n" +
-        "scanf(\"%d\",&i);\n" +
-        "\n" +
-        "\n" +
+        "Finished checking --- 1 code warning\n",[{answer : "unused variable", isRight: false},{answer : "buffer overflow", isRight: true},{answer : "undefined behaviour", isRight: false},{answer : "everythings fine", isRight: false}],"Scanf() reads input from the keyboard.<br\>" +
+        "<br\>" +
+        "scanf(\"%d\",&i);<br\>" +
+        "<br\>" +
+        "<br\>" +
         "As scanf() has no limitation of characters it can lead to buffer overflows.")
 
 

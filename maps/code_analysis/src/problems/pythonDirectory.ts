@@ -14,12 +14,12 @@ $(function() {
         "\n" +
         "Issue: [B607:start_process_with_partial_path] Starting a process with a partial executable path\n" +
         "   Severity: Low   Confidence: High\n" +
-        "   Location: directory.py:2:0\n",[{answer : "risk of malicious code execution", isRight: false},{answer : "risk of data breach", isRight: true},{answer : "risk of running unchecked statements", isRight: false},{answer : "risk of buffer overflow", isRight: false}],"os.system() runs system commands in Python. For example the ls command in Linux which prints every file in the current folder.\n" +
-        "\n" +
-        "import os\n" +
-        "os.system('ls')\n" +
-        "\n" +
-        "\n" +
+        "   Location: directory.py:2:0\n",[{answer : "risk of malicious code execution", isRight: false},{answer : "risk of data breach", isRight: true},{answer : "risk of running unchecked statements", isRight: false},{answer : "risk of buffer overflow", isRight: false}],"os.system() runs system commands in Python. For example the ls command in Linux which prints every file in the current folder.<br\>" +
+        "<br\>" +
+        "import os<br\>" +
+        "os.system('ls')<br\>" +
+        "<br\>" +
+        "<br\>" +
         "If there are sensitive files such as passwd or other internal company files there is the risk of a data breach.")
 
 
