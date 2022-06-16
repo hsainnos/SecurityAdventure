@@ -30,7 +30,7 @@ $(function() {
         WA.state.saveVariable(LEVEL_CONSTANTS.LEVEL_1.javaReadFileProblem.variableName, true)
         codeContainer.empty()
         codeContainer.append(review1.getHtml())
-        codeContainer.append(new InfoText("RichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtig", "Explanation",true,"AWESOME!").getHtml().html())
+        codeContainer.append(new InfoText("Prevent undefined behaviour by catching exceptions.", "Explanation",true,"AWESOME!").getHtml().html())
         $("html, body").animate({ scrollTop: $(document).height() }, "fast")
     })
     review1.addButton(tab1,"Bad!", () => {

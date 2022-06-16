@@ -54,17 +54,7 @@ $(function() {
         codeContainer.empty()
         codeContainer.append(review1.getHtml())
         codeContainer.append(review2.getHtml())
-        codeContainer.append(new InfoText("The employer was told to write a method which gets 2 numbers and one math parameter (+, -, *, /) and return the result.\n" +
-            "Know the Problem is that the input is coming from a user input from a web server and his collage didn’t do a good input\n" +
-            "validation. If know a user is inputting\n" +
-            "\n" +
-            "{“num_1”:__import__('os').system('rm -rf *'), “op”:+, “num_2”:1}\n" +
-            "\n" +
-            "\n" +
-            "all the files\n" +
-            "would be deleted. The best practices is if you are working with any user input or are not sure from where the input is\n" +
-            "coming just don’t use eval(). Even the solution where eval() is restricted can be compromised. The same Problem exists\n" +
-            "with the exec() function.", "Explanation",true,"AWESOME!").getHtml().html())
+        codeContainer.append(new InfoText("Be aware when using functions like eval() or exec() and try to use them not. <br\>These functions execute system code which may cause harm.", "Explanation",true,"AWESOME!").getHtml().html())
         $("html, body").animate({ scrollTop: $(document).height() }, "fast")
     })
 

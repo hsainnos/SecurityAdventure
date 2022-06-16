@@ -24,7 +24,7 @@ $(function() {
         codeContainer.empty()
         codeContainer.append(review1.getHtml())
     WA.state.saveVariable(LEVEL_CONSTANTS.LEVEL_1.cPrintProblem.variableName, true)
-    codeContainer.append(new InfoText("RichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtig",  "Explanation:",true, "AWESOME!").getHtml().html())
+    codeContainer.append(new InfoText("fgets() is the correct function to prevent buffer overflows.<br\>",  "Explanation:",true, "AWESOME!").getHtml().html())
         $("html, body").animate({ scrollTop: $(document).height() }, "fast");
     })
     review1.addButton(tab1,"Bad!", () => {
