@@ -23,7 +23,7 @@ $(function() {
 
         codeContainer.empty()
         codeContainer.append(review1.getHtml())
-        codeContainer.append(new InfoText("RichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtig", "Explanation",true,"AWESOME!").getHtml().html())
+        codeContainer.append(new InfoText("There is no problem. <br\> The user input is checked in the math library and the error is handled.", "Explanation",true,"AWESOME!").getHtml().html())
         $("html, body").animate({ scrollTop: $(document).height() }, "fast")
     })
     review1.addButton(tab1,"Bad!", () => {

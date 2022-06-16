@@ -132,7 +132,7 @@ $(function() {
         codeContainer.append(review1.getHtml())
         codeContainer.append(review2.getHtml())
         WA.state.saveVariable(LEVEL_CONSTANTS.LEVEL_1.javaPasswordProblem.variableName, true)
-        codeContainer.append(new InfoText("RichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtig", "Explanation",true,"AWESOME!").getHtml().html())
+        codeContainer.append(new InfoText("Use password optimized hashing algorithms such as argon2. <br\> MD5 is not considered collison resistant anymore. <br\> SHA256 is considered secure but it is too fast to calculate and may be vulnerable to bruteforcing.", "Explanation",true,"AWESOME!").getHtml().html())
         $("html, body").animate({ scrollTop: $(document).height() }, "fast")
     })
 //codeReviewApi.addReviewObjectsToHtmlElement(phase1Element, codeArray)

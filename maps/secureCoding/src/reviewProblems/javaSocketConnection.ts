@@ -168,7 +168,7 @@ $(function() {
         codeContainer.append(review1.getHtml())
         codeContainer.append(review2.getHtml())
         WA.state.saveVariable(LEVEL_CONSTANTS.LEVEL_1.javaSocketProblem.variableName, true)
-        codeContainer.append(new InfoText("RichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtig", "Explanation",true,"AWESOME!").getHtml().html())
+        codeContainer.append(new InfoText("Confidential data should only be sent through encrypted connections. <br\> Be also aware that some versions of encryption may be outdated and insecure. <br\>", "Explanation",true,"AWESOME!").getHtml().html())
         $("html, body").animate({ scrollTop: $(document).height() }, "fast")
     })
 //codeReviewApi.addReviewObjectsToHtmlElement(phase1Element, codeArray)

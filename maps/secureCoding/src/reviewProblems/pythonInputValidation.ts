@@ -69,7 +69,7 @@ $(function() {
         codeContainer.empty()
         codeContainer.append(review1.getHtml())
         codeContainer.append(review2.getHtml())
-        codeContainer.append(new InfoText("RichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtigRichtig", "Explanation",true,"AWESOME!").getHtml().html())
+        codeContainer.append(new InfoText("Do a good input validation and check every case. This prevents crashes.", "Explanation",true,"AWESOME!").getHtml().html())
         $("html, body").animate({ scrollTop: $(document).height() }, "fast")
     })
 
