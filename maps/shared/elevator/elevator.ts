@@ -74,6 +74,7 @@ export enum Levels {
     'Level2.json',
     'Level3.json',
     'Level5.json',
+    'Lobby.json',
     max
 }
 

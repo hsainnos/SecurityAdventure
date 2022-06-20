@@ -6,7 +6,7 @@ let TextFiles: any = TextFilesGerman;
 
 let currentItem: any = undefined;
 let currentTriggerMessage: any = undefined;
-elevator.setMaxLevelAvailable(5);
+elevator.setMaxLevelAvailable(6);
 
 WA.room.setProperty("exit", "exitUrl", "Level5.json");
 elevator.setCurrentLevel("Level5.json");
@@ -29,7 +29,12 @@ WA.room.onEnterLayer("interact_up").subscribe(() => {
         message: TextFiles.elevator_interact_message,
         callback: () => {
             WA.room.setProperty("exit", "exitUrl", elevator.setLevelUp());
-            WA.ui.openPopup("popUp_elevator", elevator.getCurrentLevel().toString(), []);
+            if (elevator.getCurrentLevelJson() == "Lobby.json") {
+                WA.room.setProperty("exit", "exitUrl", "http://play.workadventure.localhost/_/global/maps.workadventure.localhost/starter/map.json")
+                WA.ui.openPopup("popUp_elevator", elevator.getCurrentLevelJson().slice(0, 5), []);
+            } else {
+                WA.ui.openPopup("popUp_elevator", elevator.getCurrentLevel().toString(), []);
+            }
         },
     });
 });

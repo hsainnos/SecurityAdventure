@@ -3,7 +3,7 @@ import {TextFilesGerman} from "../../shared/TextFiles/TextFilesGerman.js";
 import {TextFilesEnglish} from "../../shared/TextFiles/TextFilesEnglish.js";
 
 WA.onInit().then(() => {
-    const elevatorSubscription = WA.room.onEnterLayer("exit").subscribe(() => {
+    const elevatorSubscription = WA.room.onEnterLayer("exitPoint").subscribe(() => {
         WA.nav.goToRoom("../starter/map.json")
     })
 })
