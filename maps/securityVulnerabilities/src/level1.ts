@@ -2,7 +2,7 @@ import {elevator} from "../../shared/elevator/elevator.js"
 import {TextFilesGerman} from "../../shared/TextFiles/TextFilesGerman.js";
 import {TextFilesEnglish} from "../../shared/TextFiles/TextFilesEnglish.js";
 
-let TextFiles: any = TextFilesGerman;
+let TextFiles: any = TextFilesEnglish;
 let currentItem: any = undefined;
 let currentTriggerMessage: any = undefined;
 
@@ -53,6 +53,8 @@ WA.room.onEnterLayer("interact_up").subscribe(() => {
     });
 });
 
+WA.room.onLeaveLayer("interact_up").subscribe(() => closeTriggerMessage());
+
 WA.room.onEnterLayer("Kylo_Popup").subscribe(() => {
     WA.state.saveVariable('quest_1_3_visible', true)
 })
@@ -86,7 +88,7 @@ WA.room.onEnterLayer("F1_Notebook").subscribe( () => {
 });
 
 WA.room.onLeaveLayer("F1_Notebook").subscribe(() => {
-    closeTriggerMessage()
+    closePopUp();
 });
 
 function questMatch(quest: string = "") {
@@ -114,9 +116,16 @@ function questMatch(quest: string = "") {
     }
 }
 
-function closeTriggerMessage() {
+function closePopUp() {
     if (currentTriggerMessage !== undefined) {
         currentTriggerMessage.close();
+        currentTriggerMessage = undefined;
+    }
+}
+
+function closeTriggerMessage() {
+    if (currentTriggerMessage !== undefined) {
+        currentTriggerMessage.remove();
         currentTriggerMessage = undefined;
     }
 }

@@ -4908,12 +4908,6 @@
          "id":123,
          "name":"Hinweis_2",
          "opacity":0,
-         "properties":[
-                {
-                 "name":"openWebsite",
-                 "type":"string",
-                 "value":"https:\/\/website.be-aware.informatik.hs-augsburg.de\/S2_Hinweis_Bild_2.html"
-                }],
          "type":"tilelayer",
          "visible":true,
          "width":50,
@@ -4975,12 +4969,6 @@
          "id":122,
          "name":"Hinweis_1",
          "opacity":0,
-         "properties":[
-                {
-                 "name":"openWebsite",
-                 "type":"string",
-                 "value":"https:\/\/website.be-aware.informatik.hs-augsburg.de\/S2_Hinweis_Bild_1.html"
-                }],
          "type":"tilelayer",
          "visible":true,
          "width":50,
@@ -5109,8 +5097,8 @@
                  "type":"website",
                  "visible":true,
                  "width":324.5,
-                 "x":1211.33333333333,
-                 "y":463.333333333333
+                 "x":1161.33333333333,
+                 "y":514.666666666666
                 }, 
                 {
                  "height":215.833333333333,
@@ -5347,8 +5335,8 @@
                  "type":"website",
                  "visible":true,
                  "width":476.333333333333,
-                 "x":1143.16666666667,
-                 "y":365.666666666666
+                 "x":1145.16666666667,
+                 "y":421.666666666666
                 }, 
                 {
                  "height":387.333333333333,

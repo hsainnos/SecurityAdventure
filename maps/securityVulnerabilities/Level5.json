@@ -1397,12 +1397,6 @@
          "id":43,
          "name":"LinkStand3Website2",
          "opacity":0,
-         "properties":[
-                {
-                 "name":"openWebsite",
-                 "type":"string",
-                 "value":"https:\/\/www.biteno.com\/was-ist-voip-phishing\/"
-                }],
          "type":"tilelayer",
          "visible":true,
          "width":50,
@@ -1464,12 +1458,6 @@
          "id":42,
          "name":"LinkStand3Website1",
          "opacity":0,
-         "properties":[
-                {
-                 "name":"openWebsite",
-                 "type":"string",
-                 "value":"https:\/\/praxistipps.chip.de\/call-id-spoofing-was-ist-das-einfach-erklaert_94571"
-                }],
          "type":"tilelayer",
          "visible":true,
          "width":50,
@@ -1541,12 +1529,6 @@
          "id":47,
          "name":"LinkStand2Website2",
          "opacity":0,
-         "properties":[
-                {
-                 "name":"openWebsite",
-                 "type":"string",
-                 "value":"https:\/\/www.funkschau.de\/office-kommunikation\/effektiver-schutz-vor-voice-fraud.145442.html"
-                }],
          "type":"tilelayer",
          "visible":true,
          "width":50,
@@ -1608,12 +1590,6 @@
          "id":46,
          "name":"LinkStand2Website1",
          "opacity":0,
-         "properties":[
-                {
-                 "name":"openWebsite",
-                 "type":"string",
-                 "value":"https:\/\/praxistipps.chip.de\/phishing-mails-erkennen-die-besten-tipps_28497"
-                }],
          "type":"tilelayer",
          "visible":true,
          "width":50,
@@ -1685,12 +1661,6 @@
          "id":37,
          "name":"LinkStand1Website2",
          "opacity":0,
-         "properties":[
-                {
-                 "name":"openWebsite",
-                 "type":"string",
-                 "value":"https:\/\/www.datenschutz.org\/passwort-sicherheit\/"
-                }],
          "type":"tilelayer",
          "visible":true,
          "width":50,
@@ -1752,12 +1722,6 @@
          "id":36,
          "name":"LinkStand1Website1",
          "opacity":0,
-         "properties":[
-                {
-                 "name":"openWebsite",
-                 "type":"string",
-                 "value":"https:\/\/checkdeinpasswort.de"
-                }],
          "type":"tilelayer",
          "visible":true,
          "width":50,

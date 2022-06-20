@@ -2,7 +2,7 @@ import {elevator} from "../../shared/elevator/elevator.js"
 import {TextFilesGerman} from "../../shared/TextFiles/TextFilesGerman.js";
 import {TextFilesEnglish} from "../../shared/TextFiles/TextFilesEnglish.js";
 
-let TextFiles: any = TextFilesGerman;
+let TextFiles: any = TextFilesEnglish;
 
 let currentItem: any = undefined;
 let currentTriggerMessage: any = undefined;

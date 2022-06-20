@@ -2786,12 +2786,6 @@
          "id":77,
          "name":"Credits",
          "opacity":0,
-         "properties":[
-                {
-                 "name":"openWebsite",
-                 "type":"string",
-                 "value":"https:\/\/website.be-aware.informatik.hs-augsburg.de\/EG_Credits.html"
-                }],
          "type":"tilelayer",
          "visible":true,
          "width":50,
@@ -2853,12 +2847,6 @@
          "id":78,
          "name":"Tipp 1",
          "opacity":0,
-         "properties":[
-                {
-                 "name":"openWebsite",
-                 "type":"string",
-                 "value":"https:\/\/website.be-aware.informatik.hs-augsburg.de\/EG_1.html"
-                }],
          "type":"tilelayer",
          "visible":true,
          "width":50,
@@ -2920,12 +2908,6 @@
          "id":80,
          "name":"Tipp 2",
          "opacity":0,
-         "properties":[
-                {
-                 "name":"openWebsite",
-                 "type":"string",
-                 "value":"https:\/\/website.be-aware.informatik.hs-augsburg.de\/EG_2&3.html"
-                }],
          "type":"tilelayer",
          "visible":true,
          "width":50,
@@ -2987,12 +2969,6 @@
          "id":81,
          "name":"Tipp 3",
          "opacity":0,
-         "properties":[
-                {
-                 "name":"openWebsite",
-                 "type":"string",
-                 "value":"https:\/\/website.be-aware.informatik.hs-augsburg.de\/EG_2&3.html"
-                }],
          "type":"tilelayer",
          "visible":true,
          "width":50,
@@ -3054,12 +3030,6 @@
          "id":82,
          "name":"Tipp 4",
          "opacity":0,
-         "properties":[
-                {
-                 "name":"openWebsite",
-                 "type":"string",
-                 "value":"https:\/\/website.be-aware.informatik.hs-augsburg.de\/EG_4.html"
-                }],
          "type":"tilelayer",
          "visible":true,
          "width":50,

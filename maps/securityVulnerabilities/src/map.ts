@@ -8,7 +8,7 @@ WA.onInit().then(() => {
     })
 })
 
-let TextFiles: any = TextFilesGerman;
+let TextFiles: any = TextFilesEnglish;
 let currentItem: any = undefined;
 let currentTriggerMessage: any = undefined;
 

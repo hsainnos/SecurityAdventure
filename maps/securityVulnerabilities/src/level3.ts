@@ -17,7 +17,7 @@ WA.onInit().then(() => {
 
 WA.state.saveVariable('quest_3_counter', 0).catch(e => console.error(e))
 
-let TextFiles: any = TextFilesGerman;
+let TextFiles: any = TextFilesEnglish;
 
 let currentItem: any = undefined;
 let currentTriggerMessage: any = undefined;
@@ -26,7 +26,7 @@ let mail_2_quest_done = false;
 let mail_3_quest_done = false;
 elevator.setMaxLevelAvailable(4);
 
-WA.room.setProperty("exit", "exitUrl", "Level5.json");
+WA.room.setProperty("exit", "exitUrl", "Level3.json");
 elevator.setCurrentLevel("Level3.json");
 
 WA.ui.openPopup("popUp_elevator", elevator.getCurrentLevel().toString(), []);

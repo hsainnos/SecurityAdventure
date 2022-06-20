@@ -12,7 +12,7 @@ WA.onInit().then(() => {
     })
 })
 
-let TextFiles: any = TextFilesGerman;
+let TextFiles: any = TextFilesEnglish;
 
 WA.room.hideLayer("USB_Highlight");
 

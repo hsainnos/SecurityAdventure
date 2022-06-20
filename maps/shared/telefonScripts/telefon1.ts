@@ -24,19 +24,19 @@ function show_second() {
     document.body.innerHTML =
         '<div class="telefon_container">' +
         '<div id="second_question" class="imessage">\n' +
-        '        <p class="from-them">Wie hat sich angesichts der Lage im Jahr 2020 die Kundenstruktur der HSA-Informatics\n' +
-        ' verändert?</p>\n' +
+        '        <p class="from-them">How has the customer structure of HSA-Informatics changed in view of \n' +
+        ' the situation in 2020</p>\n' +
         '    </div>\n' +
         '\n' +
-        '    <p id="comment_2" class="comment">Wählen Sie Ihre Antwort:</p>\n' +
+        '    <p id="comment_2" class="comment">Choose your answer:</p>\n' +
         '\n' +
         '    <div id="second_answer" class="imessage">\n' +
-        '        <p id="second_answer_option1" class="from-me grow">Aufgrund der Verunsicherung in der\n' +
-        ' Bevölkerung im Jahre 2020, ist ein Großteil der\n' +
-        ' Privatkunden weggefallen, weswegen sich die HSA-Informatics nun fast ausschließlich auf Geschäftskunden\n' +
-        ' fokussiert.</p>\n' +
-        '        <p id="second_answer_option2" class="from-me grow">Aus Gründen der Datensicherheit kann ich\n' +
-        ' Ihnen dazu keine Informationen geben.</p>\n' +
+        '        <p id="second_answer_option1" class="from-me grow">Due to the uncertainty in the population\n' +
+        ' in 2020, the majority of private customers have disappeared, which is why HSA-Informatics is now\n' +
+        ' focusing almost exclusively on business customers\n' +
+        ' </p>\n' +
+        '        <p id="second_answer_option2" class="from-me grow">For reasons of data security,\n' +
+        ' I cannot give you any information on this.</p>\n' +
         '    </div>' +
         '</div>'
 
@@ -67,18 +67,17 @@ function show_third() {
     document.body.innerHTML =
         '<div class="telefon_container">' +
         '<div id="third_question" class="imessage">\n' +
-        '        <p class="from-them">Um Ihnen das Preisgeld für den besten Ausbildungsplatz 2020 zukommen zulassen, brauche ich\n' +
-        ' nun von Ihnen noch die Bankverbindung eines dem Unternehmen zugehörigen Kontos.</p>\n' +
+        '        <p class="from-them">In order to send you the prize money for the best training place in 2020, ' +
+        '                    I now need the bank details of an account belonging to the company from you.</p>\n' +
         '    </div>\n' +
         '\n' +
-        '    <p id="comment_3" class="comment">Wählen Sie Ihre Antwort:</p>\n' +
+        '    <p id="comment_3" class="comment">Choose your answer:</p>\n' +
         '\n' +
         '    <div id="third_answer" class="imessage">\n' +
-        '        <p id="third_answer_option1" class="from-me grow">IBAN: DE89 5001 0517 7221 5356 85 <br> Der\n' +
-        ' zugehörige Pin lautet ****</p>\n' +
-        '        <p id="third_answer_option2" class="from-me grow">Ich bin nicht autorisiert, Daten dieser Art\n' +
-        ' weiterzugeben, ich bitte Sie, sich an meinen\n' +
-        ' Vorgesetzten zu wenden.</p>\n' +
+        '        <p id="third_answer_option1" class="from-me grow">IBAN: DE89 5001 0517 7221 5356 85 <br> The\n' +
+        ' associated pin is ****</p>\n' +
+        '        <p id="third_answer_option2" class="from-me grow">I am not authorized to share data of this type,\n' +
+        ' please contact my manager. </p>\n' +
         '    </div>' +
         '</div>'
 
@@ -110,19 +109,19 @@ function show_fourth() {
     document.body.innerHTML =
         '<div class="telefon_container">' +
         '<div id="fourth_question" class="imessage">\n' +
-        '        <p class="from-them">Vielen Dank für Ihre Zeit, auf wiederhören.</p>\n' +
+        '        <p class="from-them">Thank you for your time, see you again.</p>\n' +
         '    </div>\n' +
         '\n' +
-        '    <p id="comment_4" class="comment">Fazit:</p>\n' +
+        '    <p id="comment_4" class="comment">Conclusion:</p>\n' +
         '\n' +
         '    <div id="conclusion" class="imessage">\n' +
-        '        <p class="from-them">Richtige Antworten: <br>\n' +
-        '            1. Frage: Option 1; <br>\n' +
-        '            2. Frage: Option 2; <br>\n' +
-        '            3. Frage: Option 2; <br>\n' +
+        '        <p class="from-them">Right Answers: <br>\n' +
+        '            1. Question: Option1; <br>\n' +
+        '            2. Question: Option2; <br>\n' +
+        '            3. Question: Option2; <br>\n' +
         '        </p>\n' +
-        '        <p class="from-them">Geben Sie keine Informationen über die Unternehmensstruktur o.Ä. Auskunft. <br>\n' +
-        '            Konkurrenten können sich mit solchen Informationen Wettbewerbsvorteile erschleichen.\n' +
+        '        <p class="from-them">Do not give any information about the company structure or similar information. ' +
+        '                            Competitors can gain competitive advantages with such information.\n' +
         '        </p>\n' +
         '    </div>' +
         '</div>'
