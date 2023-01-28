@@ -17,7 +17,7 @@ $(function() {
         "name=tempfile.mktemp()\n" +
         "<br\>" +
         "<br\>" +
-        "<br\>n" +
+        "<br\>" +
         "This temporary file can be altered and this a security risk.")
 
 

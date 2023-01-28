@@ -14,7 +14,7 @@ $(function() {
         "\n" +
         "    public static void main(String[] args) {\n" +
         "\n" +
-        "        System.out.println(\"Please type your in password, it will be stored secure afterwards\");\n" +
+        "        System.out.println(\"Please type in your password, it will be stored secure afterwards\");\n" +
         "        Scanner sc = new Scanner(System.in);\n" +
         "        String password = sc.nextLine();\n" +
         "    }\n" +
